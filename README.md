@@ -44,6 +44,9 @@
   <img width=390 src="https://thekhiem7-github-stats.vercel.app/api?username=the-khiem7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true" alt="readme stats" />
   <img width=325 align="center" src="https://thekhiem7-github-stats.vercel.app/api/top-langs/?username=the-khiem7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&layout=compact" alt="top langs" />
 </div>
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=@the_khiem7" alt="WakaTime stats"/>
+</div>
 
 <p align="left"> 
   <img src="https://komarev.com/ghpvc/?username=the-khiem7&color=0069b4" /> 
