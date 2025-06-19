@@ -47,8 +47,10 @@
   <img width=390 src="https://thekhiem7-github-stats.vercel.app/api?username=the-khiem7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true" alt="readme stats" />
 <!--   <img width=325 align="center" src="https://thekhiem7-github-stats.vercel.app/api/top-langs/?username=the-khiem7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&layout=compact" alt="top langs" /> -->
 </div>
+
+<!-- 🗂️ Wakatime -->
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=the_khiem7&custom_title=Coding%20Activity%20(Since%20mid-June%202025)&layout=compact&display_format=percent" alt="WakaTime stats"/>
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=the_khiem7&hide=other&custom_title=Coding%20Activity%20(Since%20mid-June%202025)&layout=compact&display_format=percent" alt="WakaTime stats"/>
 </div>
 
 <p align="left"> 
