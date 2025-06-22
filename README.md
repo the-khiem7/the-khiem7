@@ -35,23 +35,25 @@
   -->
 </p> 
 
-[![Readme Card](https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=AlohaMarket.Aspire)](https://github.com/AlohaMarket/AlohaMarket.Aspire.git)
-[![Readme Card](https://thekhiem7-github-stats.vercel.app/api/pin/?username=AnPhuoc2410&repo=Samurai_Fukusho)](https://github.com/AnPhuoc2410/Samurai_Fukusho.git)
-[![Readme Card](https://thekhiem7-github-stats.vercel.app/api/top-langs/?username=the-khiem7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&layout=compact)]()
-
-
 <!-- GitHub Stats and Streak Section -->
 <h2 align="center">⚡ GitHub Stats ⚡</h2>
 <br>
 <div align="center">
   <img width=390 src="https://github-readme-streak-stats-salesp07.vercel.app/?user=the-khiem7&count_private=true&include_all_commits=true&theme=transparent&hide_border=true" alt="streak stats"/>
   <img width=390 src="https://thekhiem7-github-stats.vercel.app/api?username=the-khiem7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true" alt="readme stats" />
-<!--   <img width=325 align="center" src="https://thekhiem7-github-stats.vercel.app/api/top-langs/?username=the-khiem7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&layout=compact" alt="top langs" /> -->
 </div>
 
 <!-- 🗂️ Wakatime -->
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/wakatime?username=the_khiem7&hide=other&custom_title=Coding%20Activity%20(Since%20mid-June%202025)&layout=compact&display_format=percent" alt="WakaTime stats"/>
+  <img src="https://thekhiem7-github-stats.vercel.app/api/top-langs/?username=the-khiem7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&layout=compact" alt="top-langs"/>
+</div>
+
+---
+
+<div align="center">
+    <img width=390 src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=AlohaMarket.Aspire" alt="streak stats"/>
+    <img width=390 src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=AnPhuoc2410&repo=Samurai_Fukusho"/>
 </div>
 
 <p align="left"> 
