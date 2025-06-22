@@ -11,33 +11,14 @@
 <!-- Tech Stack Section -->
 <h2 align="center"> 🚀 Tech Stack & Tools 🧰</h2>
 <p align="center">
-
   <img src="https://skillicons.dev/icons?i=dotnet,supabase,postgres,redis,kafka&theme=light" />
   <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,go,vscode,visualstudio,ts,react,redux,tailwind&theme=light" />
   <img src="https://skillicons.dev/icons?i=azure,gcp,docker,githubactions,arch,ubuntu,git,arduino,unity&theme=light" />
-  
-  <!-- 🖥️ Backend & Databases 
-  <img src="https://skillicons.dev/icons?i=dotnet,supabase,postgres,redis,kafka&theme=light" />
-  <!-- 👨‍💻 Programming Languages 
-  <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,go&theme=light" />
-  <img src="https://skillicons.dev/icons?i=ts,html,css&theme=light" />
-  <!-- 🧰 IDEs & Editors 
-  <img src="https://skillicons.dev/icons?i=vscode,visualstudio,neovim&theme=light" />
-  <!-- 🧱 Frontend & Tooling 
-  <img src="https://skillicons.dev/icons?i=react,redux,tailwind&theme=light" />
-  <!-- ☁️ DevOps & OS 
-  <img src="https://skillicons.dev/icons?i=azure,gcp,docker,githubactions&theme=light" />
-  <img src="https://skillicons.dev/icons?i=arch,ubuntu&theme=light" />
-  <!-- 🗂️ Version Control 
-  <img src="https://skillicons.dev/icons?i=git&theme=light" />
-  <!-- 🔌 Hardware & Game Dev 
-  <img src="https://skillicons.dev/icons?i=arduino,unity&theme=light" />
-  -->
 </p> 
+<br>
 
 <!-- GitHub Stats and Streak Section -->
 <h2 align="center">⚡ GitHub Stats ⚡</h2>
-<br>
 <div align="center">
   <img width=390 src="https://github-readme-streak-stats-salesp07.vercel.app/?user=the-khiem7&count_private=true&include_all_commits=true&theme=transparent&hide_border=true" alt="streak stats"/>
   <img width=390 src="https://thekhiem7-github-stats.vercel.app/api?username=the-khiem7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true" alt="readme stats" />
@@ -49,13 +30,15 @@
   <img src="https://thekhiem7-github-stats.vercel.app/api/top-langs/?username=the-khiem7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&layout=compact" alt="top-langs"/>
 </div>
 
+<br>
+<br>
+<p align="left"> 
+  <img src="https://komarev.com/ghpvc/?username=the-khiem7&color=0069b4" /> 
+</p>
+
 ---
 
 <div align="center">
     <img width=390 src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=AlohaMarket.Aspire" alt="streak stats"/>
     <img width=390 src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=AnPhuoc2410&repo=Samurai_Fukusho"/>
 </div>
-
-<p align="left"> 
-  <img src="https://komarev.com/ghpvc/?username=the-khiem7&color=0069b4" /> 
-</p>
