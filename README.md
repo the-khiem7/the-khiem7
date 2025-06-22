@@ -36,6 +36,7 @@
 </p> 
 
 [![Readme Card](https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=AlohaMarket.Aspire)](https://github.com/AlohaMarket/AlohaMarket.Aspire.git)
+[![Readme Card](https://thekhiem7-github-stats.vercel.app/api/pin/?username=AnPhuoc2410&repo=Samurai_Fukusho)](https://github.com/AnPhuoc2410/Samurai_Fukusho.git)
 [![Readme Card](https://thekhiem7-github-stats.vercel.app/api/top-langs/?username=the-khiem7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&layout=compact)]()
 
 
