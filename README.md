@@ -37,8 +37,12 @@
 </p>
 
 ---
-
 <div align="center">
-    <img width=390 src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=AlohaMarket.Aspire" alt="streak stats"/>
-    <img width=390 src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=AnPhuoc2410&repo=Samurai_Fukusho"/>
+    <a href="[https://github.com/the-khiem7/AlohaMarket.Aspire](https://github.com/AlohaMarket/AlohaMarket.Aspire.git)">
+        <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=AlohaMarket.Aspire" alt="AlohaMarket.Aspire" />
+    </a>
+    <a href="https://github.com/AnPhuoc2410/Samurai_Fukusho">
+        <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=AnPhuoc2410&repo=Samurai_Fukusho" alt="Samurai_Fukusho" />
+    </a>
 </div>
+
