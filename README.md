@@ -32,7 +32,8 @@
 
 <br>
 <div>
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=the-khiem7&bg_color=f3f9ff&color=1f2937&title_color=111827&line=3b82f6&point=083fa1&area_color=bfdbfe&hide_border=false"alt="Activity Graph"/>
+<!-- <img src="https://github-readme-activity-graph.vercel.app/graph?username=the-khiem7&bg_color=f3f9ff&color=1f2937&title_color=111827&line=3b82f6&point=083fa1&area_color=bfdbfe&hide_border=false"alt="Activity Graph"/> -->
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=the-khiem7&theme=minimal&hide_border=true"alt="Activity Graph"/>
 </div>
 
 <br>
