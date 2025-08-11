@@ -47,7 +47,7 @@
 
 <!-- 📌📂 Repo Pin -->
 <div align="center">
-    <a href="https://github.com/AlohaMarket/AlohaMarket.Aspire.git">
+    <a href="https://github.com/AlohaMarket/AlohaMarket.Aspire">
         <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=AlohaMarket.Aspire" alt="AlohaMarket.Aspire" />
     </a>
     <a href="https://github.com/AnPhuoc2410/Samurai_Fukusho">
@@ -55,5 +55,8 @@
     </a>
     <a href="https://github.com/the-khiem7/VitaFlow.RazorPage">
         <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=VitaFlow.RazorPage" alt="VitaFlow.RazorPage" />
+    </a>
+    <a href="https://github.com/the-khiem7/ClaimRequestSystem.ASPNET">
+        <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=ClaimRequestSystem.ASPNET" alt="ClaimRequestSystem.ASPNET" />
     </a>
 </div>
