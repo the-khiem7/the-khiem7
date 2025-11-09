@@ -11,9 +11,10 @@
 <!-- 🧰💻 Tech Stack Section -->
 <h2 align="center"> 🚀 Tech Stack & Tools 🧰</h2>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=dotnet,supabase,postgres,redis,kafka&theme=light" />
-  <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,go,vscode,visualstudio,ts,react,redux,tailwind&theme=light" />
-  <img src="https://skillicons.dev/icons?i=azure,gcp,docker,githubactions,arch,ubuntu,git,arduino,unity&theme=light" />
+  <img src="https://skillicons.dev/icons?i=dotnet,flutter,react,supabase,postgres,redis,graphql,kafka&theme=light" />
+  <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,dart,ts&theme=light" />
+  <img src="https://skillicons.dev/icons?i=vscode,visualstudio,androidstudio&theme=light" />
+  <img src="https://skillicons.dev/icons?i=aws,azure,gcp,cloudflare,docker,githubactions,arch,ubuntu,git,arduino,unity&theme=light" />
 </p> 
 <br>
 
