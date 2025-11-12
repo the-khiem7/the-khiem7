@@ -42,8 +42,14 @@
 
 <!-- 📌📂 Repo Pin -->
 <div align="center">
+    <a href="https://github.com/EzyFixApp/EzyFix.aspnet">
+        <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=EzyFixApp&repo=EzyFix.aspnet" alt="EzyFix.aspnet" />
+    </a>
     <a href="https://github.com/AlohaMarket/AlohaMarket.Aspire">
         <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=AlohaMarket.Aspire" alt="AlohaMarket.Aspire" />
+    </a>
+    <a href="https://https://github.com/FirstAndroidJourney/Flutter-CellphoneZ">
+        <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=FirstAndroidJourney&repo=Flutter-CellphoneZ" alt="Flutter-CellphoneZ" />
     </a>
     <a href="https://github.com/AnPhuoc2410/Samurai_Fukusho">
         <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=AnPhuoc2410&repo=Samurai_Fukusho" alt="Samurai_Fukusho" />
@@ -52,6 +58,6 @@
         <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=VitaFlow.RazorPage" alt="VitaFlow.RazorPage" />
     </a>
     <a href="https://github.com/the-khiem7/ClaimRequestSystem.ASPNET">
-        <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=ClaimRequestSystem.ASPNET" alt="ClaimRequestSystem.ASPNET" />
+        <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=ClaimRequestSystem&repo=ClaimRequestSystem.ASPNET" alt="ClaimRequestSystem.ASPNET" />
     </a>
 </div>
