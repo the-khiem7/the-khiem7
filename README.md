@@ -48,7 +48,7 @@
     <a href="https://github.com/AlohaMarket/AlohaMarket.Aspire">
         <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=AlohaMarket.Aspire" alt="AlohaMarket.Aspire" />
     </a>
-    <a href="https://https://github.com/FirstAndroidJourney/Flutter-CellphoneZ">
+    <a href="https://github.com/FirstAndroidJourney/Flutter-CellphoneZ">
         <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=FirstAndroidJourney&repo=Flutter-CellphoneZ" alt="Flutter-CellphoneZ" />
     </a>
     <a href="https://github.com/AnPhuoc2410/Samurai_Fukusho">
