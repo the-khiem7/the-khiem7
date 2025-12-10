@@ -46,7 +46,7 @@
         <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=EzyFixApp&repo=EzyFix.aspnet" alt="EzyFix.aspnet" />
     </a>
     <a href="https://github.com/AlohaMarket/AlohaMarket.Aspire">
-        <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=AlohaMarket.Aspire" alt="AlohaMarket.Aspire" />
+        <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=AlohaMarket&repo=AlohaMarket.Aspire" alt="AlohaMarket.Aspire" />
     </a>
     <a href="https://github.com/FirstAndroidJourney/Flutter-CellphoneZ">
         <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=FirstAndroidJourney&repo=Flutter-CellphoneZ" alt="Flutter-CellphoneZ" />
@@ -57,7 +57,7 @@
     <a href="https://github.com/the-khiem7/VitaFlow.RazorPage">
         <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=the-khiem7&repo=VitaFlow.RazorPage" alt="VitaFlow.RazorPage" />
     </a>
-    <a href="https://github.com/the-khiem7/ClaimRequestSystem.ASPNET">
+    <a href="https://github.com/ClaimRequestSystem/ClaimRequestSystem.ASPNET">
         <img width="390" src="https://thekhiem7-github-stats.vercel.app/api/pin/?username=ClaimRequestSystem&repo=ClaimRequestSystem.ASPNET" alt="ClaimRequestSystem.ASPNET" />
     </a>
 </div>
