@@ -41,23 +41,23 @@
 ---
 
 <!-- 📌📂 Repo Pin -->
-<div align="center">
-    <a href="https://github.com/EzyFixApp">
-        <img width="390" src="banner/EzyFix.png" alt="EzyFix.aspnet" />
-    </a>
-    <a href="https://github.com/AlohaMarket/AlohaMarket.Aspire">
-        <img width="390" src="banner/AlohaMarket.png" alt="AlohaMarket.Aspire" />
-    </a>
-    <a href="https://github.com/FirstAndroidJourney/Flutter-CellphoneZ">
-        <img width="390" src="banner/CellphoneZ.png" alt="Flutter-CellphoneZ" />
-    </a>
-    <a href="https://github.com/AnPhuoc2410/Samurai_Fukusho">
-        <img width="390" src="banner/KnightFukusho.png" alt="Samurai_Fukusho" />
-    </a>
-    <a href="https://github.com/EvoCareSolution">
-        <img width="390" src="banner/EvoCare.png" alt="EvoCare.NET" />
-    </a>
-    <a href="https://github.com/Snake-AID/SnakeAid.ComputerVision">
-        <img width="390" src="banner/SnakeAI.png" alt="EvoCare.NET" />
-    </a>
-</div>
+<p align="center">
+  <a href="https://github.com/EzyFixApp">
+    <img width="49%" src="banner/EzyFix.png" alt="EzyFix" />
+  </a>
+  <a href="https://github.com/AlohaMarket/AlohaMarket.Aspire">
+    <img width="49%" src="banner/AlohaMarket.png" alt="AlohaMarket" />
+  </a>
+  <a href="https://github.com/FirstAndroidJourney/Flutter-CellphoneZ">
+    <img width="49%" src="banner/CellphoneZ.png" alt="CellphoneZ" />
+  </a>
+  <a href="https://github.com/AnPhuoc2410/Samurai_Fukusho">
+    <img width="49%" src="banner/KnightFukusho.png" alt="KnightFukusho" />
+  </a>
+  <a href="https://github.com/EvoCareSolution">
+    <img width="49%" src="banner/EvoCare.png" alt="EvoCare" />
+  </a>
+  <a href="https://github.com/Snake-AID/SnakeAid.ComputerVision">
+    <img width="49%" src="banner/SnakeAI.png" alt="SnakeAI" />
+  </a>
+</p>
