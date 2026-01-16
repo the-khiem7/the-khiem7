@@ -59,4 +59,7 @@
     <a href="https://github.com/Snake-AID/SnakeAid.ComputerVision">
         <img width="390" src="banner/peek/SnakeAI.png" alt="EvoCare.NET" />
     </a>
+    <a href="https://github.com/the-khiem7/MyHomeLab.ZimaOS">
+        <img width="390" src="banner/peek/ZimaOS.png" alt="EvoCare.NET" />
+    </a>
 </div>
