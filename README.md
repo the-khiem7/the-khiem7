@@ -11,10 +11,13 @@
 <!-- 🧰💻 Tech Stack Section -->
 <h2 align="center"> 🚀 Tech Stack & Tools 🧰</h2>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=dotnet,flutter,react,supabase,postgres,redis,graphql,kafka&theme=light" />
-  <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,dart,ts&theme=light" />
-  <img src="https://skillicons.dev/icons?i=vscode,visualstudio,androidstudio&theme=light" />
-  <img src="https://skillicons.dev/icons?i=aws,azure,gcp,cloudflare,docker,githubactions,arch,ubuntu,git,arduino,unity&theme=light" />
+<img src="https://skillicons.dev/icons?i=dotnet,flutter,react,graphql,pytorch&theme=light" />
+<img src="https://skillicons.dev/icons?i=arch,ubuntu&theme=light" />
+<img src="https://skillicons.dev/icons?i=rabbitmq,kafka,redis&theme=light" />
+<img src="https://skillicons.dev/icons?i=postgres,sqlite,mongodb,dynamodb,supabase,appwrite&theme=light" />
+<img src="https://skillicons.dev/icons?i=docker,nginx,terraform,ansible,githubactions,jenkins&theme=light" />
+<img src="https://skillicons.dev/icons?i=aws,azure,gcp,cloudflare,grafana,vercel&theme=light" />
+<img src="https://skillicons.dev/icons?i=c,cpp,cs,java,dart,ts&theme=light" />
 </p> 
 <br>
 
