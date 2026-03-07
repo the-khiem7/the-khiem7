@@ -55,6 +55,14 @@ experimenting with containerized
 services, reverse proxies, tunnels,
 and documented setups.
 
+---
+<!-- credly-badges:start -->
+## Credly Badges
+<p align="center">
+  <sub>Auto-synced from <a href="https://www.credly.com/users/duy-khiem">your Credly profile</a>.</sub>
+</p>
+<!-- credly-badges:end -->
+
 <div align="center">
   <img width=390 src="https://github-readme-streak-stats-salesp07.vercel.app/?user=the-khiem7&count_private=true&include_all_commits=true&theme=transparent&hide_border=true" alt="streak stats"/>
   <img width=390 src="https://thekhiem7-github-stats.vercel.app/api?username=the-khiem7&theme=transparent&hide_border=true&include_all_commits=true&count_private=true" alt="readme stats" />
