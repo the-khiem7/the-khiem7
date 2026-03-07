@@ -42,46 +42,46 @@
 
 ### ☁️ Cloud Infrastructure & DevOps
 
-- 📊 **[AWS ClickStream Analytic](https://github.com/SBW-Cloudworks)** - Batch-based clickstream analytics for an e-commerce computer store, processing raw frontend events from S3 into a PostgreSQL warehouse on EC2 with scheduled Lambda and EventBridge ETL plus R Shiny dashboards.
-- 🐧 **[Zima Linux Homelab](https://github.com/the-khiem7/MyHomeLab.ZimaOS)** - Personal ZimaOS Linux homelab for experimenting with containerized services, reverse proxies, tunnels, and documented setups.
+- 📊 **[AWS ClickStream Analytic](https://github.com/SBW-Cloudworks)** - Batch-based clickstream analytics pipeline on AWS, transforming raw frontend events from S3 into a PostgreSQL warehouse with Lambda, EventBridge, and R Shiny dashboards.
+- 🐧 **[Zima Linux Homelab](https://github.com/the-khiem7/MyHomeLab.ZimaOS)** - Personal ZimaOS homelab for containers, reverse proxies, tunnels, and self-hosted services.
 
 ### 🐧 Linux
-- 🐧 **[Archlinux Endeavour Bootstrap](https://github.com/the-khiem7/archlinux-endeavour-bootstrap)** - Smart bootstrap script for setting up EndeavourOS / Arch Linux environment with optional TUI phases.
+- 🐧 **[Archlinux Endeavour Bootstrap](https://github.com/the-khiem7/archlinux-endeavour-bootstrap)** - Bootstrap script for setting up EndeavourOS and Arch Linux with optional TUI phases.
 
 ### 👁️ Computer Vision & ML
 
-- 🐍 **[Snake AI Detection](link)** - Computer vision system with custom-trained YOLO models for real-time snake detection.
+- 🐍 **[Snake AI Detection](link)** - Real-time snake detection system with custom-trained YOLO models.
 
 ### 🛍️ Commerce & Service Platforms
 
-- 🛠️ **[EzyFix](https://github.com/EzyFixApp)** - An AI-powered modern platform redefining home repair services in Vietnam, replacing an outdated trust-based offline market with transparent workflows, secure digital payments, and a standardized, reliable user experience.
-- 🛍️ **[AlohaMarket](https://github.com/AlohaMarket/AlohaMarket.Aspire)** - Cloud-native service marketplace platform with modular microservices, enabling buyers and sellers to connect, book services, and manage transactions with .NET Aspire.
-- 🌸 **[Flower Shop WPF](https://github.com/the-khiem7/FlowerShop.WPF)** - WPF desktop application for flower shop management, built with a three-tier architecture covering authentication, catalog and inventory management, order processing, and admin reporting.
-- 🎹 **[TTK Piano Center](https://github.com/the-khiem7/TTK_Piano_Center.JSP)** - Web-based music course management system built with Java Servlets, JSP, JDBC, and Bootstrap, supporting course browsing, enrollment cart workflows, user registration, and admin operations.
+- 🛠️ **[EzyFix](https://github.com/EzyFixApp)** - AI-powered home repair platform with transparent workflows, secure payments, and standardized service operations.
+- 🛍️ **[AlohaMarket](https://github.com/AlohaMarket/AlohaMarket.Aspire)** - Cloud-native service marketplace built with modular microservices on .NET Aspire.
+- 🌸 **[Flower Shop WPF](https://github.com/the-khiem7/FlowerShop.WPF)** - WPF flower shop management app with authentication, catalog, inventory, orders, and admin reporting.
+- 🎹 **[TTK Piano Center](https://github.com/the-khiem7/TTK_Piano_Center.JSP)** - Java JSP course management system for piano classes, enrollments, carts, and admin operations.
 
 ### 📱 Mobile Apps & Android
 
-- 📱 **[CellphoneZ](https://github.com/FirstAndroidJourney/CellphoneZ)** - Responsive Flutter client for the CellphoneZ marketplace, enabling shoppers to browse products, manage carts, and pay with COD or VNPay while admins curate catalog, brands, and orders.
-- 🤖 **[Android Playground PRM392](https://github.com/the-khiem7/AndroidPlayground.PRM392)** - Multi-module Android project that consolidates labs 1 to 14 into a single showcase app, covering layouts, CRUD flows, Room, Retrofit, Glide, Firebase Auth, notifications, fragments, and map/location exercises.
+- 📱 **[CellphoneZ](https://github.com/FirstAndroidJourney/CellphoneZ)** - Flutter marketplace app for browsing products, managing carts, and paying with COD or VNPay.
+- 🤖 **[Android Playground PRM392](https://github.com/the-khiem7/AndroidPlayground.PRM392)** - Multi-module Android showcase app covering layouts, CRUD, Room, Retrofit, Firebase Auth, notifications, and maps.
 
 ### 🎓 Student Productivity & EdTech
 
-- 🏡 **[COZYHOME_NaverHackathon2025](https://github.com/the-khiem7/COZYHOME_NaverHackathon2025)** - Chrome Extension new-tab life management hub for students, developed as part of Naver Hackathon 2025, combining smart startpage widgets, task and calendar planning, Pomodoro, journaling, finance and habit tracking, plus study group collaboration features.
+- 🏡 **[COZYHOME_NaverHackathon2025](https://github.com/the-khiem7/COZYHOME_NaverHackathon2025)** - Chrome Extension new-tab life management hub for students, built for Naver Hackathon 2025.
 
 ### 🏢 Business & Operations Systems
 
-- 🧾 **[Claim Request System](https://github.com/ClaimRequestSystem/ClaimRequestSystem.ASPNET)** - Internal enterprise workflow for overtime claim management, covering the draft-to-paid lifecycle, multi-step approval, finance processing, reminder emails, and operational reporting for employees, approvers, finance, and administrators.
-- 🚗 **[EvoCare](https://github.com/EvoCareSolution)** - EV service center maintenance system for workflow and operations management.
-- 🐟 **[Feng Shui Koi Consulting](https://github.com/FSK-Consultant/FengShuiKoi.aspnet)** - ASP.NET-based consulting platform for feng shui koi recommendations and related business workflows.
+- 🧾 **[Claim Request System](https://github.com/ClaimRequestSystem/ClaimRequestSystem.ASPNET)** - Enterprise overtime claim system with approval workflows, finance processing, reminders, and reporting.
+- 🚗 **[EvoCare](https://github.com/EvoCareSolution)** - EV service center maintenance system for operational workflow management.
+- 🐟 **[Feng Shui Koi Consulting](https://github.com/FSK-Consultant/FengShuiKoi.aspnet)** - ASP.NET consulting platform for feng shui koi recommendations and business workflows.
 
 ### 🩺 Healthcare Platforms
 
-- 🩸 **VitaFlow** - Role-based blood donation support platform built with ASP.NET Core Razor Pages, EF Core, and SQL Server, covering donor and recipient workflows, blood request review, inventory management, nearby donor search, and public education tools.
+- 🩸 **VitaFlow** - Blood donation support platform for donor and recipient workflows, request review, inventory management, and public education.
 
 ### 🎮 Unity Games
 
-- ⚔️ **[Samurai Fukusho](https://github.com/the-khiem7/Samurai_Fukusho)** - 2D action-packed dungeon crawler built in Unity, where a betrayed knight battles through dark labyrinths with combat, exploration, progression, and environmental storytelling.
-- 🪨 **[Stone Age World Platformer](https://github.com/the-khiem7/Stone_Age_World_Platformer.Unity)** - Unity 6 learning project focused on core 2D platformer mechanics in a stone age themed world, featuring player movement, physics interactions, level design, URP visuals, and the new Input System.
+- ⚔️ **[Samurai Fukusho](https://github.com/the-khiem7/Samurai_Fukusho)** - 2D Unity dungeon crawler with combat, exploration, progression, and dark fantasy storytelling.
+- 🪨 **[Stone Age World Platformer](https://github.com/the-khiem7/Stone_Age_World_Platformer.Unity)** - Unity 6 2D platformer study project with stone age visuals, physics, level design, and URP.
 
 ---
 <!-- credly-badges:start -->
