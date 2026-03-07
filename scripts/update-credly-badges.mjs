@@ -47,6 +47,12 @@ async function main() {
 }
 
 async function fetchCredlyBadges(profileUrl) {
+  const badgesApiUrl = buildBadgesApiUrl(profileUrl);
+  const apiBadges = await fetchCredlyBadgesFromApi(badgesApiUrl);
+  if (apiBadges.length > 0) {
+    return apiBadges;
+  }
+
   const response = await fetch(profileUrl, {
     headers: {
       "user-agent": "github-actions-credly-badge-sync",
@@ -66,6 +72,56 @@ async function fetchCredlyBadges(profileUrl) {
   }
 
   return badges;
+}
+
+async function fetchCredlyBadgesFromApi(badgesApiUrl) {
+  const response = await fetch(badgesApiUrl, {
+    headers: {
+      "user-agent": "github-actions-credly-badge-sync",
+      accept: "application/json",
+    },
+  });
+
+  if (!response.ok) {
+    return [];
+  }
+
+  const payload = await response.json();
+  const records = Array.isArray(payload?.data) ? payload.data : [];
+
+  return records
+    .map((record) => {
+      const badgeId = typeof record?.id === "string" ? record.id.trim() : "";
+      const badgeName =
+        pickNestedString(record, [
+          ["badge_template", "name"],
+          ["name"],
+          ["title"],
+        ]) || "";
+      const imageUrl =
+        pickNestedString(record, [
+          ["image_url"],
+          ["image", "url"],
+          ["badge_template", "image_url"],
+          ["badge_template", "image", "url"],
+        ]) || "";
+      const issuedAt =
+        pickNestedString(record, [["issued_at"], ["issued_at_date"], ["accepted_at"], ["updated_at"]]) ||
+        null;
+
+      if (!badgeId || !badgeName || !isCredlyImageUrl(imageUrl)) {
+        return null;
+      }
+
+      return {
+        url: `https://www.credly.com/badges/${badgeId}`,
+        imageUrl,
+        name: decodeHtml(badgeName),
+        issuedAt,
+      };
+    })
+    .filter(Boolean)
+    .sort(compareBadges);
 }
 
 function extractBadges(html) {
@@ -276,6 +332,28 @@ function pickString(value, keys) {
   return null;
 }
 
+function pickNestedString(value, paths) {
+  for (const path of paths) {
+    let current = value;
+    let valid = true;
+
+    for (const segment of path) {
+      if (!current || typeof current !== "object" || !(segment in current)) {
+        valid = false;
+        break;
+      }
+
+      current = current[segment];
+    }
+
+    if (valid && typeof current === "string" && current.trim()) {
+      return current.trim();
+    }
+  }
+
+  return null;
+}
+
 function isCredlyBadgeUrl(value) {
   return /^https:\/\/www\.credly\.com\/badges\/[a-z0-9-]+/i.test(value);
 }
@@ -287,6 +365,10 @@ function normalizeBadgeUrl(value) {
 
 function isCredlyImageUrl(value) {
   return /^https:\/\/images\.credly\.com\//i.test(value);
+}
+
+function buildBadgesApiUrl(profileUrl) {
+  return `${profileUrl.replace(/\/+$/, "")}/badges.json`;
 }
 
 function safeJsonParse(value) {
