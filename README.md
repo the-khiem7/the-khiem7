@@ -59,7 +59,15 @@ and documented setups.
 <!-- credly-badges:start -->
 ## Credly Badges
 <p align="center">
-  <sub>Auto-synced from <a href="https://www.credly.com/users/duy-khiem">your Credly profile</a>.</sub>
+  <a href="https://www.credly.com/badges/6c255afe-1f8c-49ae-ab56-22e1023a09bf">
+    <img src="https://images.credly.com/images/fd5cd35b-6c0d-4946-9010-fcb3b4ad0839/blob" width="80" height="80" alt="Core Skills Learning Path" />
+  </a>
+  <a href="https://www.credly.com/badges/8f1abdcf-62c6-497b-9c5a-7bd3d76bbd79">
+    <img src="https://images.credly.com/images/0f5127c3-639b-47f2-abca-01107591c639/blob" width="80" height="80" alt="LFS167: Introduction to Jenkins" />
+  </a>
+</p>
+<p align="center">
+  <sub>Showing the latest 2 public badge(s) from Credly. Source: <a href="https://www.credly.com/users/duy-khiem">Credly profile</a>.</sub>
 </p>
 <!-- credly-badges:end -->
 
