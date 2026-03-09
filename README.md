@@ -40,12 +40,18 @@
 
 ## Development Projects
 
-### ☁️ Cloud Infrastructure & DevOps
+### ♾️ DevOps & Site Reliability
 
-- 📊 **[AWS ClickStream Analytic](https://github.com/SBW-Cloudworks)** - Batch-based clickstream analytics pipeline on AWS, transforming raw frontend events from S3 into a PostgreSQL warehouse with Lambda, EventBridge, and R Shiny dashboards.
+- 🩺 **[GO! Uptime]()** - **Lightweight Golang-powered uptime monitor to track your services in real time, notify you instantly about downtime, and share simple public status pages from one dashboard.**
 - 🐧 **[Zima Linux Homelab](https://github.com/the-khiem7/MyHomeLab.ZimaOS)** - Personal ZimaOS homelab for containers, reverse proxies, tunnels, and self-hosted services.
 - 🐳 **[Jenkins Docker Builder](https://github.com/the-khiem7/jenkins-docker-builder)** - Practical guide to running Jenkins with Docker, covering Docker-in-Docker builds and secure deployments behind an Nginx reverse proxy in a self-hosted environment.
+
+### ☁️ AWS First Cloud Journey
+
+- 📊 **[AWS ClickStream Analytic](https://github.com/SBW-Cloudworks)** - Batch-based clickstream analytics pipeline on AWS, transforming raw frontend events from S3 into a PostgreSQL warehouse with Lambda, EventBridge, and R Shiny dashboards.
+
 ### 🐧 Linux
+
 - 🐧 **[Archlinux Endeavour Bootstrap](https://github.com/the-khiem7/archlinux-endeavour-bootstrap)** - Bootstrap script for setting up EndeavourOS and Arch Linux with optional TUI phases.
 
 ### 👁️ Computer Vision & ML
