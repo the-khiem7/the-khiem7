@@ -14,6 +14,8 @@
 ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![YOLO](https://img.shields.io/badge/-YOLO-111F68?style=flat-square&logo=yolo&logoColor=white)
+![onnx](https://img.shields.io/badge/-ONNX-005CED?style=flat-square&logo=onnx&logoColor=white)
 ![RabbitMQ](https://img.shields.io/badge/-RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)
 ![Kafka](https://img.shields.io/badge/-Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
 ![Redis](https://img.shields.io/badge/-Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
@@ -33,6 +35,7 @@
 ![Terraform](https://img.shields.io/badge/-Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
 ![Ansible](https://img.shields.io/badge/-Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/-Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
+![CodeMagic](https://img.shields.io/badge/-CodeMagic-F45E3F?style=flat-square&logo=codemagic&logoColor=white)
 <br>
 
 ---
@@ -52,46 +55,49 @@
 
 ### ☁️ AWS First Cloud Journey
 
-- 📊 **[AWS ClickStream Analytic](https://github.com/SBW-Cloudworks)** - Batch-based clickstream analytics pipeline on AWS, transforming raw frontend events from S3 into a PostgreSQL warehouse with Lambda, EventBridge, and R Shiny dashboards.
+- 📊 **[AWS ClickStream Analytic](https://github.com/SBW-Cloudworks)** - Batch clickstream analytics pipeline on AWS, transforming frontend event data from S3 into a PostgreSQL warehouse with Lambda, EventBridge, and R Shiny dashboards.
 
 ### 🐧 Linux
 
-- 🐧 **[Archlinux Endeavour Bootstrap](https://github.com/the-khiem7/archlinux-endeavour-bootstrap)** - Bootstrap script for setting up EndeavourOS and Arch Linux with optional TUI phases.
+- 🐧 **[Archlinux Endeavour Bootstrap](https://github.com/the-khiem7/archlinux-endeavour-bootstrap)** - Bootstrap script for setting up EndeavourOS and Arch Linux with optional interactive TUI setup phases.
 
 ### 👁️ Computer Vision & ML
 
-- 🐍 **[Snake AI Detection](link)** - Real-time snake detection system with custom-trained YOLO models.
+- 🐍 **[Snake AI Detection Training](link)** - End-to-end training pipeline for snake detection, from dataset management with Roboflow to YOLOv12 experiments tracked with ClearML.
+- ⚡ **[Snake AI Inference Service](https://github.com/Snake-AID/SnakeAI.ModelEndpoint)** - Containerized inference service exposing trained YOLO models via FastAPI for fast and reliable snake identification.
 
-### 🛍️ Commerce & Service Platforms
+### 🛍️ Service Platforms
 
-- 🛠️ **[EzyFix](https://github.com/EzyFixApp)** - AI-powered home repair platform with transparent workflows, secure payments, and standardized service operations.
-- 🛍️ **[AlohaMarket](https://github.com/AlohaMarket/AlohaMarket.Aspire)** - Cloud-native service marketplace built with modular microservices on .NET Aspire.
-- 🌸 **[Flower Shop WPF](https://github.com/the-khiem7/FlowerShop.WPF)** - WPF flower shop management app with authentication, catalog, inventory, orders, and admin reporting.
-- 🎹 **[TTK Piano Center](https://github.com/the-khiem7/TTK_Piano_Center.JSP)** - Java JSP course management system for piano classes, enrollments, carts, and admin operations.
+- 🐍 **[Snake Aid](https://github.com/Snake-AID/SnakeAid.Backend)** - **Unified platform improving snakebite emergency response by connecting patients, rescuers, experts, and administrators with AI identification and coordinated rescue workflows.**
+- 🛍️ **[AlohaMarket](https://github.com/AlohaMarket/AlohaMarket.Aspire)** - **Cloud-native service marketplace built in microservices architecture with .NET Aspire and Kafka.**
+- 🛠️ **[EzyFix](https://github.com/EzyFixApp)** - AI-assisted home repair platform with transparent workflows, secure payments, and standardized service operations.
+- 🌸 **[Flower Shop WPF](https://github.com/the-khiem7/FlowerShop.WPF)** - WPF desktop management system for flower shop operations including authentication, catalog, inventory, orders, and reporting.
+- 🎹 **[TTK Piano Center](https://github.com/the-khiem7/TTK_Piano_Center.JSP)** - Java JSP course management system for piano classes, enrollments, carts, and administrative operations.
 
 ### 📱 Mobile Apps & Android
 
+- 🐍 **[Snake Aid Mobile](https://github.com/Snake-AID/SnakeAid.Mobile)** - **Companion mobile app for the SnakeAid platform, allowing patients, rescuers, and experts to send SOS signals, track rescue operations, and identify snakes with AI.**
 - 📱 **[CellphoneZ](https://github.com/FirstAndroidJourney/CellphoneZ)** - Flutter marketplace app for browsing products, managing carts, and paying with COD or VNPay.
 - 🤖 **[Android Playground PRM392](https://github.com/the-khiem7/AndroidPlayground.PRM392)** - Multi-module Android showcase app covering layouts, CRUD, Room, Retrofit, Firebase Auth, notifications, and maps.
 
 ### 🎓 Student Productivity & EdTech
 
-- 🏡 **[COZYHOME_NaverHackathon2025](https://github.com/the-khiem7/COZYHOME_NaverHackathon2025)** - Chrome Extension new-tab life management hub for students, built for Naver Hackathon 2025.
+- 🏡 **[COZYHOME_NaverHackathon2025](https://github.com/the-khiem7/COZYHOME_NaverHackathon2025)** - Chrome extension new-tab productivity hub designed for student life management, built for Naver Hackathon 2025.
 
 ### 🏢 Business & Operations Systems
 
 - 🧾 **[Claim Request System](https://github.com/ClaimRequestSystem/ClaimRequestSystem.ASPNET)** - Enterprise overtime claim system with approval workflows, finance processing, reminders, and reporting.
-- 🚗 **[EvoCare](https://github.com/EvoCareSolution)** - EV service center maintenance system for operational workflow management.
+- 🚗 **[EvoCare](https://github.com/EvoCareSolution)** - EV service center management system supporting operational workflows and maintenance tracking.
 - 🐟 **[Feng Shui Koi Consulting](https://github.com/FSK-Consultant/FengShuiKoi.aspnet)** - ASP.NET consulting platform for feng shui koi recommendations and business workflows.
 
 ### 🩺 Healthcare Platforms
 
-- 🩸 **VitaFlow** - Blood donation support platform for donor and recipient workflows, request review, inventory management, and public education.
+- 🩸 **VitaFlow** - Blood donation support platform for donor and recipient coordination, request management, inventory tracking, and public awareness.
 
 ### 🎮 Unity Games
 
-- ⚔️ **[Samurai Fukusho](https://github.com/the-khiem7/Samurai_Fukusho)** - 2D Unity dungeon crawler with combat, exploration, progression, and dark fantasy storytelling.
-- 🪨 **[Stone Age World Platformer](https://github.com/the-khiem7/Stone_Age_World_Platformer.Unity)** - Unity 6 2D platformer study project with stone age visuals, physics, level design, and URP.
+- ⚔️ **[Samurai Fukusho](https://github.com/the-khiem7/Samurai_Fukusho)** - 2D Unity dungeon crawler featuring combat, exploration, character progression, and dark fantasy storytelling.
+- 🪨 **[Stone Age World Platformer](https://github.com/the-khiem7/Stone_Age_World_Platformer.Unity)** - Unity 6 2D platformer study project exploring physics, level design, stone-age themed visuals, and URP rendering.
 
 ---
 <!-- credly-badges:start -->
