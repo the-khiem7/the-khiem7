@@ -94,6 +94,10 @@
 
 - 🩸 **VitaFlow** - Blood donation support platform for donor and recipient coordination, request management, inventory tracking, and public awareness.
 
+### 🤖 AI-Driven Development Life Cycle
+
+- 🪶 **[Chronicle Composer](https://github.com/the-khiem7/chronicle-composer.git)** - A Git commit composition workflow that turns messy changes into clean, logical commit history that tells the story of a project's development. 
+
 ### 🎮 Unity Games
 
 - ⚔️ **[Samurai Fukusho](https://github.com/the-khiem7/Samurai_Fukusho)** - 2D Unity dungeon crawler featuring combat, exploration, character progression, and dark fantasy storytelling.
