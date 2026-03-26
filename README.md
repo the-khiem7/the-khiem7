@@ -66,6 +66,10 @@
 - 🐍 **[Snake AI Detection Training](link)** - End-to-end training pipeline for snake detection, from dataset management with Roboflow to YOLOv12 experiments tracked with ClearML.
 - ⚡ **[Snake AI Inference Service](https://github.com/Snake-AID/SnakeAI.ModelEndpoint)** - Containerized inference service exposing trained YOLO models via FastAPI for fast and reliable snake identification.
 
+### 🎯 Productivity Tools
+
+- 📈 **[SheetFlow](https://github.com/the-khiem7/SheetFlow)** - End-to-end training pipeline for snake detection, from dataset management with Roboflow to YOLOv12 experiments tracked with ClearML.
+
 ### 🛍️ Service Platforms
 
 - 🐍 **[Snake Aid](https://github.com/Snake-AID/SnakeAid.Backend)** - **Unified platform improving snakebite emergency response by connecting patients, rescuers, experts, and administrators with AI identification and coordinated rescue workflows.**
