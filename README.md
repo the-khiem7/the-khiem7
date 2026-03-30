@@ -53,7 +53,12 @@
 - 🐧 **[Zima Linux Homelab](https://github.com/the-khiem7/MyHomeLab.ZimaOS)** - Personal ZimaOS homelab for containers, reverse proxies, tunnels, and self-hosted services.
 - 🐳 **[Jenkins Docker Builder](https://github.com/the-khiem7/jenkins-docker-builder)** - Practical guide to running Jenkins with Docker, covering Docker-in-Docker builds and secure deployments behind an Nginx reverse proxy in a self-hosted environment.
 
-### ☁️ AWS First Cloud Journey
+### 🎯 Productivity Tools
+
+- 📈 **[SheetFlow](https://github.com/the-khiem7/SheetFlow)** - A structured Google Apps Script system that turns Google Sheets into a lightweight backlog management, task tracking, and daily reporting tool with automated sorting, grouping, and report generation.
+- 🐧 **[PenguinSpace Desktop](https://github.com/the-khiem7/PenguinSpace)** - Desktop tool that helps developers reclaim disk space eaten by WSL distros and Docker storage on Windows. 
+
+### ☁️ Cloud Engineering Project – First Cloud AI Journey Program, AWS Vietnam
 
 - 📊 **[AWS ClickStream Analytic](https://github.com/SBW-Cloudworks)** - Batch clickstream analytics pipeline on AWS, transforming frontend event data from S3 into a PostgreSQL warehouse with Lambda, EventBridge, and R Shiny dashboards.
 
@@ -66,10 +71,6 @@
 - 🐍 **[Snake AI Detection Training](link)** - End-to-end training pipeline for snake detection, from dataset management with Roboflow to YOLOv12 experiments tracked with ClearML.
 - ⚡ **[Snake AI Inference Service](https://github.com/Snake-AID/SnakeAI.ModelEndpoint)** - Containerized inference service exposing trained YOLO models via FastAPI for fast and reliable snake identification.
 
-### 🎯 Productivity Tools
-
-- 📈 **[SheetFlow](https://github.com/the-khiem7/SheetFlow)** - A structured Google Apps Script system that turns Google Sheets into a lightweight backlog management, task tracking, and daily reporting tool with automated sorting, grouping, and report generation.
-- 🐧 **[PenguinSpace Desktop](https://github.com/the-khiem7/PenguinSpace)** - Desktop tool that helps developers reclaim disk space eaten by WSL distros and Docker storage on Windows. 
 ### 🛍️ Service Platforms
 
 - 🐍 **[Snake Aid](https://github.com/Snake-AID/SnakeAid.Backend)** - **Unified platform improving snakebite emergency response by connecting patients, rescuers, experts, and administrators with AI identification and coordinated rescue workflows.**
