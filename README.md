@@ -68,8 +68,8 @@
 
 ### 🎯 Productivity Tools
 
-- 📈 **[SheetFlow](https://github.com/the-khiem7/SheetFlow)** - End-to-end training pipeline for snake detection, from dataset management with Roboflow to YOLOv12 experiments tracked with ClearML.
-- 🐧 **[PenguinSpace Desktop](https://github.com/the-khiem7/PenguinSpace)** A desktop tool that helps developers reclaim disk space eaten by WSL distros and Docker storage on Windows. 
+- 📈 **[SheetFlow](https://github.com/the-khiem7/SheetFlow)** - A structured Google Apps Script system that turns Google Sheets into a lightweight backlog management, task tracking, and daily reporting tool with automated sorting, grouping, and report generation.
+- 🐧 **[PenguinSpace Desktop](https://github.com/the-khiem7/PenguinSpace)** - Desktop tool that helps developers reclaim disk space eaten by WSL distros and Docker storage on Windows. 
 ### 🛍️ Service Platforms
 
 - 🐍 **[Snake Aid](https://github.com/Snake-AID/SnakeAid.Backend)** - **Unified platform improving snakebite emergency response by connecting patients, rescuers, experts, and administrators with AI identification and coordinated rescue workflows.**
