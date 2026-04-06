@@ -112,6 +112,12 @@
 <!-- credly-badges:start -->
 ## Credly Badges
 <p align="center">
+  <a href="https://www.credly.com/badges/9b564d0d-569c-449f-b084-f2df885c864d">
+    <img src="https://images.credly.com/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob" width="80" height="80" alt="AWS Educate Introduction to Generative AI - Training Badge" />
+  </a>
+  <a href="https://www.credly.com/badges/6b27bb90-64cc-4f51-a659-d4932593922b">
+    <img src="https://images.credly.com/images/a13653a5-3902-4eb9-96ca-790f6b535d4e/blob" width="80" height="80" alt="LFS148: Getting Started with OpenTelemetry" />
+  </a>
   <a href="https://www.credly.com/badges/91457304-5984-4eb2-9b0e-e580f64fb365">
     <img src="https://images.credly.com/images/2397c05c-eb0e-4b08-be97-9e8261d43125/blob" width="80" height="80" alt="LFS162: Introduction to DevOps and Site Reliability Engineering" />
   </a>
@@ -123,7 +129,7 @@
   </a>
 </p>
 <p align="center">
-  <sub>Showing the latest 3 public badge(s) from Credly. Source: <a href="https://www.credly.com/users/duy-khiem">Credly profile</a>.</sub>
+  <sub>Showing the latest 5 public badge(s) from Credly. Source: <a href="https://www.credly.com/users/duy-khiem">Credly profile</a>.</sub>
 </p>
 <!-- credly-badges:end -->
 
