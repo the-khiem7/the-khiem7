@@ -24,7 +24,9 @@ async function main() {
   const filteredBadges = NAME_FILTER
     ? badges.filter((badge) => badge.name.toLowerCase().includes(NAME_FILTER))
     : badges;
-  const selectedBadges = filteredBadges.slice(0, BADGE_LIMIT);
+  const selectedBadges = filteredBadges
+    .slice(0, BADGE_LIMIT)
+    .sort(compareBadgesByProvider);
 
   if (selectedBadges.length === 0) {
     throw new Error("No public badges found from the Credly profile.");
@@ -90,6 +92,7 @@ async function fetchCredlyBadgesFromApi(badgesApiUrl) {
       const issuedAt =
         pickNestedString(record, [["issued_at"], ["issued_at_date"], ["accepted_at"], ["updated_at"]]) ||
         null;
+      const provider = pickBadgeProvider(record);
 
       if (!badgeId || !badgeName || !isCredlyImageUrl(imageUrl)) {
         return null;
@@ -99,11 +102,12 @@ async function fetchCredlyBadgesFromApi(badgesApiUrl) {
         url: `https://www.credly.com/badges/${badgeId}`,
         imageUrl,
         name: decodeHtml(badgeName),
+        provider,
         issuedAt,
       };
     })
     .filter(Boolean)
-    .sort(compareBadges);
+    .sort(compareBadgesByIssuedAt);
 }
 
 function replaceSection(source, startMarker, endMarker, replacement) {
@@ -138,7 +142,30 @@ ${items}
 ${END_MARKER}`;
 }
 
-function compareBadges(a, b) {
+function compareBadgesByProvider(a, b) {
+  if (a.provider && b.provider) {
+    const providerOrder = a.provider.localeCompare(b.provider, "en", {
+      sensitivity: "base",
+    });
+
+    if (providerOrder !== 0) {
+      return providerOrder;
+    }
+  } else if (a.provider) {
+    return -1;
+  } else if (b.provider) {
+    return 1;
+  }
+
+  const issuedAtOrder = compareBadgesByIssuedAt(a, b);
+  if (issuedAtOrder !== 0) {
+    return issuedAtOrder;
+  }
+
+  return a.name.localeCompare(b.name, "en", { sensitivity: "base" });
+}
+
+function compareBadgesByIssuedAt(a, b) {
   if (a.issuedAt && b.issuedAt) {
     return Date.parse(b.issuedAt) - Date.parse(a.issuedAt);
   }
@@ -152,6 +179,23 @@ function compareBadges(a, b) {
   }
 
   return 0;
+}
+
+function pickBadgeProvider(record) {
+  const issuerName = pickIssuerName(record?.issuer) || pickIssuerName(record?.badge_template?.issuer);
+  if (issuerName) {
+    return decodeHtml(issuerName);
+  }
+
+  return pickNestedString(record, [["badge_template", "owner_vanity_slug"]]) || "";
+}
+
+function pickIssuerName(issuer) {
+  const entities = Array.isArray(issuer?.entities) ? issuer.entities : [];
+  const primaryEntity = entities.find((entry) => entry?.primary && entry?.entity?.name);
+  const firstEntity = entities.find((entry) => entry?.entity?.name);
+
+  return primaryEntity?.entity?.name || firstEntity?.entity?.name || null;
 }
 
 function pickNestedString(value, paths) {
