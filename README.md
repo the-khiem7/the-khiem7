@@ -118,6 +118,9 @@
   <a href="https://www.credly.com/badges/6c255afe-1f8c-49ae-ab56-22e1023a09bf">
     <img src="https://images.credly.com/images/fd5cd35b-6c0d-4946-9010-fcb3b4ad0839/blob" width="80" height="80" alt="Core Skills Learning Path" />
   </a>
+  <a href="https://www.credly.com/badges/64009072-fb78-403a-b0d1-937b1fc9dcc9">
+    <img src="https://images.credly.com/images/2677386a-c65f-4d4d-89f2-5b0babbc77d2/KickoffAgileBadge.png" width="80" height="80" alt="Fundamentals of Agile Project Management" />
+  </a>
   <a href="https://www.credly.com/badges/6b27bb90-64cc-4f51-a659-d4932593922b">
     <img src="https://images.credly.com/images/a13653a5-3902-4eb9-96ca-790f6b535d4e/blob" width="80" height="80" alt="LFS148: Getting Started with OpenTelemetry" />
   </a>
@@ -129,7 +132,7 @@
   </a>
 </p>
 <p align="center">
-  <sub>Showing the latest 5 public badge(s) from Credly. Source: <a href="https://www.credly.com/users/duy-khiem">Credly profile</a>.</sub>
+  <sub>Showing the latest 6 public badge(s) from Credly. Source: <a href="https://www.credly.com/users/duy-khiem">Credly profile</a>.</sub>
 </p>
 <!-- credly-badges:end -->
 
