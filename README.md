@@ -115,6 +115,9 @@
   <a href="https://www.credly.com/badges/9b564d0d-569c-449f-b084-f2df885c864d">
     <img src="https://images.credly.com/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob" width="80" height="80" alt="AWS Educate Introduction to Generative AI - Training Badge" />
   </a>
+  <a href="https://www.credly.com/badges/918fb908-5caa-40ad-8c39-3ba1b23f9810">
+    <img src="https://images.credly.com/images/e4c38805-e2fd-469c-83fc-8dab303be440/blob" width="80" height="80" alt="Kubernetes Monitoring Learning Path" />
+  </a>
   <a href="https://www.credly.com/badges/6c255afe-1f8c-49ae-ab56-22e1023a09bf">
     <img src="https://images.credly.com/images/fd5cd35b-6c0d-4946-9010-fcb3b4ad0839/blob" width="80" height="80" alt="Core Skills Learning Path" />
   </a>
@@ -126,9 +129,6 @@
   </a>
   <a href="https://www.credly.com/badges/91457304-5984-4eb2-9b0e-e580f64fb365">
     <img src="https://images.credly.com/images/2397c05c-eb0e-4b08-be97-9e8261d43125/blob" width="80" height="80" alt="LFS162: Introduction to DevOps and Site Reliability Engineering" />
-  </a>
-  <a href="https://www.credly.com/badges/8f1abdcf-62c6-497b-9c5a-7bd3d76bbd79">
-    <img src="https://images.credly.com/images/0f5127c3-639b-47f2-abca-01107591c639/blob" width="80" height="80" alt="LFS167: Introduction to Jenkins" />
   </a>
 </p>
 <p align="center">
