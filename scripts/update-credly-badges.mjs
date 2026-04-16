@@ -134,9 +134,11 @@ function renderBadgeBlock(badges, metadata) {
 
   return `${START_MARKER}
 ## Credly Badges
-<p align="center">
-  ${items}
-</p>
+<table align="center">
+  <tr>
+    <td align="center">${items}</td>
+  </tr>
+</table>
 <p align="center">
   <sub>${label} Source: <a href="${metadata.profileUrl}">Credly profile</a>.</sub>
 </p>
