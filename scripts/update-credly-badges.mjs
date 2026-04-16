@@ -1,10 +1,11 @@
 import { readFile, writeFile } from "node:fs/promises";
 
 const README_PATH = process.env.README_PATH || "README.md";
-const PROFILE_URL =
-  process.env.CREDLY_PROFILE_URL || "https://www.credly.com/users/duy-khiem";
-const BADGE_LIMIT = parseBadgeLimit(process.env.CREDLY_BADGE_LIMIT);
-const BADGES_PER_ROW = parseBadgeLimit(process.env.CREDLY_BADGES_PER_ROW) || 6;
+const PROFILE_URL = (
+  process.env.CREDLY_PROFILE_URL || "https://www.credly.com/users/duy-khiem"
+).trim();
+const BADGE_LIMIT = parsePositiveInteger(process.env.CREDLY_BADGE_LIMIT);
+const BADGES_PER_ROW = parsePositiveInteger(process.env.CREDLY_BADGES_PER_ROW, 6);
 const NAME_FILTER = (process.env.CREDLY_BADGE_FILTER || "").trim().toLowerCase();
 const START_MARKER = "<!-- credly-badges:start -->";
 const END_MARKER = "<!-- credly-badges:end -->";
@@ -25,8 +26,9 @@ async function main() {
   const filteredBadges = NAME_FILTER
     ? badges.filter((badge) => badge.name.toLowerCase().includes(NAME_FILTER))
     : badges;
-  const selectedBadges = (BADGE_LIMIT > 0 ? filteredBadges.slice(0, BADGE_LIMIT) : filteredBadges)
-    .sort(compareBadgesByProvider);
+  const selectedBadges = [
+    ...(BADGE_LIMIT > 0 ? filteredBadges.slice(0, BADGE_LIMIT) : filteredBadges),
+  ].sort(compareBadgesByProvider);
 
   if (selectedBadges.length === 0) {
     throw new Error("No public badges found from the Credly profile.");
@@ -68,7 +70,7 @@ async function fetchCredlyBadgesFromApi(badgesApiUrl) {
   });
 
   if (!response.ok) {
-    return [];
+    throw new Error(`Credly API request failed with HTTP ${response.status}: ${badgesApiUrl}`);
   }
 
   const payload = await response.json();
@@ -121,7 +123,7 @@ function renderBadgeBlock(badges, metadata) {
       const cells = row
         .map(
           (badge) =>
-            `    <td align="center"><a href="${badge.url}"><img src="${badge.imageUrl}" width="80" height="80" alt="${escapeHtmlAttribute(badge.name)}" /></a></td>`,
+            `    <td align="center"><a href="${escapeHtmlAttribute(badge.url)}"><img src="${escapeHtmlAttribute(badge.imageUrl)}" width="80" height="80" alt="${escapeHtmlAttribute(badge.name)}" /></a></td>`,
         )
         .join("\n");
 
@@ -129,7 +131,7 @@ function renderBadgeBlock(badges, metadata) {
     })
     .join("\n");
 
-  const labelPrefix = metadata.limit > 0 ? `Showing the latest ${metadata.count}` : `Showing all ${metadata.count}`;
+  const labelPrefix = metadata.limit > 0 ? `Showing ${metadata.count}` : `Showing all ${metadata.count}`;
   const label = metadata.filter
     ? `${labelPrefix} public badge(s) matching "${escapeHtml(metadata.filter)}".`
     : `${labelPrefix} public badge(s) from Credly.`;
@@ -140,7 +142,7 @@ function renderBadgeBlock(badges, metadata) {
 ${rows}
 </table>
 <p align="center">
-  <sub>${label} Source: <a href="${metadata.profileUrl}">Credly profile</a>.</sub>
+  <sub>${label} Source: <a href="${escapeHtmlAttribute(metadata.profileUrl)}">Credly profile</a>.</sub>
 </p>
 ${END_MARKER}`;
 }
@@ -210,9 +212,13 @@ function buildBadgesApiUrl(profileUrl) {
   return `${profileUrl.replace(/\/+$/, "")}/badges.json`;
 }
 
-function parseBadgeLimit(value) {
-  const parsed = Number.parseInt(value || "0", 10);
-  return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+function parsePositiveInteger(value, fallback = 0) {
+  if (!/^\d+$/.test(value || "")) {
+    return fallback;
+  }
+
+  const parsed = Number.parseInt(value, 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
 }
 
 function chunkArray(items, size) {
@@ -228,38 +234,60 @@ function chunkArray(items, size) {
 function packBadgeRows(badges, capacity) {
   const groupedBadges = groupBadgesByProvider(badges);
   const units = groupedBadges.flatMap((group) => {
+    const provider = group[0]?.provider || "";
+
     if (group.length <= capacity) {
-      return [group];
+      return [
+        {
+          badges: group,
+          provider,
+          splitIndex: 0,
+        },
+      ];
     }
 
-    return chunkArray(group, capacity);
+    return chunkArray(group, capacity).map((chunk, index) => ({
+      badges: chunk,
+      provider,
+      splitIndex: index,
+    }));
   });
 
+  // Larger provider groups are packed first to keep rows dense without splitting a provider group.
   units.sort(compareBadgeUnits);
 
   const rows = [];
 
   for (const unit of units) {
-    let placed = false;
+    let bestFitRow = null;
+    let smallestRemainder = Number.POSITIVE_INFINITY;
 
     for (const row of rows) {
-      if (row.count + unit.length <= capacity) {
-        row.units.push(unit);
-        row.count += unit.length;
-        placed = true;
-        break;
+      const remainder = capacity - row.count - unit.badges.length;
+      if (remainder >= 0 && remainder < smallestRemainder) {
+        bestFitRow = row;
+        smallestRemainder = remainder;
       }
     }
 
-    if (!placed) {
-      rows.push({
-        count: unit.length,
-        units: [unit],
-      });
+    if (bestFitRow) {
+      if (unit.splitIndex > 0) {
+        bestFitRow.units.unshift(unit);
+      } else {
+        bestFitRow.units.push(unit);
+      }
+
+      bestFitRow.count += unit.badges.length;
+      continue;
     }
+
+    rows.push({
+      count: unit.badges.length,
+      units: [unit],
+    });
   }
 
-  return rows.map((row) => row.units.flat());
+  return rows.map((row) => row.units.flatMap((unit) => unit.badges));
 }
 
 function groupBadgesByProvider(badges) {
@@ -288,18 +316,22 @@ function groupBadgesByProvider(badges) {
 }
 
 function compareBadgeUnits(a, b) {
-  if (b.length !== a.length) {
-    return b.length - a.length;
+  if (b.badges.length !== a.badges.length) {
+    return b.badges.length - a.badges.length;
   }
 
-  const aProvider = a[0]?.provider || "";
-  const bProvider = b[0]?.provider || "";
-  const providerOrder = aProvider.localeCompare(bProvider, "en", { sensitivity: "base" });
+  const providerOrder = a.provider.localeCompare(b.provider, "en", { sensitivity: "base" });
   if (providerOrder !== 0) {
     return providerOrder;
   }
 
-  return (a[0]?.name || "").localeCompare(b[0]?.name || "", "en", { sensitivity: "base" });
+  if (a.splitIndex !== b.splitIndex) {
+    return a.splitIndex - b.splitIndex;
+  }
+
+  return (a.badges[0]?.name || "").localeCompare(b.badges[0]?.name || "", "en", {
+    sensitivity: "base",
+  });
 }
 
 function decodeHtml(value) {
