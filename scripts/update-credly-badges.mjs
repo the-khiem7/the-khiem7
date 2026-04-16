@@ -6,6 +6,7 @@ const PROFILE_URL = (
 ).trim();
 const BADGE_LIMIT = parsePositiveInteger(process.env.CREDLY_BADGE_LIMIT);
 const BADGES_PER_ROW = parsePositiveInteger(process.env.CREDLY_BADGES_PER_ROW, 6);
+const BADGE_IMAGE_SIZE = 100;
 const NAME_FILTER = (process.env.CREDLY_BADGE_FILTER || "").trim().toLowerCase();
 const START_MARKER = "<!-- credly-badges:start -->";
 const END_MARKER = "<!-- credly-badges:end -->";
@@ -123,7 +124,7 @@ function renderBadgeBlock(badges, metadata) {
       const cells = row
         .map(
           (badge) =>
-            `    <td align="center"><a href="${escapeHtmlAttribute(badge.url)}"><img src="${escapeHtmlAttribute(badge.imageUrl)}" width="80" height="80" alt="${escapeHtmlAttribute(badge.name)}" /></a></td>`,
+            `    <td align="center" width="${BADGE_IMAGE_SIZE}"><a href="${escapeHtmlAttribute(badge.url)}"><img src="${escapeHtmlAttribute(badge.imageUrl)}" width="${BADGE_IMAGE_SIZE}" height="${BADGE_IMAGE_SIZE}" alt="${escapeHtmlAttribute(badge.name)}" /></a></td>`,
         )
         .join("\n");
 
