@@ -4,6 +4,7 @@ const README_PATH = process.env.README_PATH || "README.md";
 const PROFILE_URL =
   process.env.CREDLY_PROFILE_URL || "https://www.credly.com/users/duy-khiem";
 const BADGE_LIMIT = parseBadgeLimit(process.env.CREDLY_BADGE_LIMIT);
+const BADGES_PER_ROW = parseBadgeLimit(process.env.CREDLY_BADGES_PER_ROW) || 6;
 const NAME_FILTER = (process.env.CREDLY_BADGE_FILTER || "").trim().toLowerCase();
 const START_MARKER = "<!-- credly-badges:start -->";
 const END_MARKER = "<!-- credly-badges:end -->";
@@ -89,9 +90,6 @@ async function fetchCredlyBadgesFromApi(badgesApiUrl) {
           ["badge_template", "image_url"],
           ["badge_template", "image", "url"],
         ]) || "";
-      const issuedAt =
-        pickNestedString(record, [["issued_at"], ["issued_at_date"], ["accepted_at"], ["updated_at"]]) ||
-        null;
       const provider = pickBadgeProvider(record);
 
       if (!badgeId || !badgeName || !isCredlyImageUrl(imageUrl)) {
@@ -103,11 +101,9 @@ async function fetchCredlyBadgesFromApi(badgesApiUrl) {
         imageUrl,
         name: decodeHtml(badgeName),
         provider,
-        issuedAt,
       };
     })
-    .filter(Boolean)
-    .sort(compareBadgesByIssuedAt);
+    .filter(Boolean);
 }
 
 function replaceSection(source, startMarker, endMarker, replacement) {
@@ -120,12 +116,18 @@ function replaceSection(source, startMarker, endMarker, replacement) {
 }
 
 function renderBadgeBlock(badges, metadata) {
-  const items = badges
-    .map(
-      (badge) =>
-        `<a href="${badge.url}"><img src="${badge.imageUrl}" width="80" height="80" alt="${escapeHtmlAttribute(badge.name)}" /></a>`,
-    )
-    .join(" ");
+  const rows = packBadgeRows(badges, BADGES_PER_ROW)
+    .map((row) => {
+      const cells = row
+        .map(
+          (badge) =>
+            `    <td align="center"><a href="${badge.url}"><img src="${badge.imageUrl}" width="80" height="80" alt="${escapeHtmlAttribute(badge.name)}" /></a></td>`,
+        )
+        .join("\n");
+
+      return `  <tr>\n${cells}\n  </tr>`;
+    })
+    .join("\n");
 
   const labelPrefix = metadata.limit > 0 ? `Showing the latest ${metadata.count}` : `Showing all ${metadata.count}`;
   const label = metadata.filter
@@ -135,9 +137,7 @@ function renderBadgeBlock(badges, metadata) {
   return `${START_MARKER}
 ## Credly Badges
 <table align="center">
-  <tr>
-    <td align="center">${items}</td>
-  </tr>
+${rows}
 </table>
 <p align="center">
   <sub>${label} Source: <a href="${metadata.profileUrl}">Credly profile</a>.</sub>
@@ -160,28 +160,7 @@ function compareBadgesByProvider(a, b) {
     return 1;
   }
 
-  const issuedAtOrder = compareBadgesByIssuedAt(a, b);
-  if (issuedAtOrder !== 0) {
-    return issuedAtOrder;
-  }
-
   return a.name.localeCompare(b.name, "en", { sensitivity: "base" });
-}
-
-function compareBadgesByIssuedAt(a, b) {
-  if (a.issuedAt && b.issuedAt) {
-    return Date.parse(b.issuedAt) - Date.parse(a.issuedAt);
-  }
-
-  if (a.issuedAt) {
-    return -1;
-  }
-
-  if (b.issuedAt) {
-    return 1;
-  }
-
-  return 0;
 }
 
 function pickBadgeProvider(record) {
@@ -234,6 +213,93 @@ function buildBadgesApiUrl(profileUrl) {
 function parseBadgeLimit(value) {
   const parsed = Number.parseInt(value || "0", 10);
   return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+}
+
+function chunkArray(items, size) {
+  const chunks = [];
+
+  for (let index = 0; index < items.length; index += size) {
+    chunks.push(items.slice(index, index + size));
+  }
+
+  return chunks;
+}
+
+function packBadgeRows(badges, capacity) {
+  const groupedBadges = groupBadgesByProvider(badges);
+  const units = groupedBadges.flatMap((group) => {
+    if (group.length <= capacity) {
+      return [group];
+    }
+
+    return chunkArray(group, capacity);
+  });
+
+  units.sort(compareBadgeUnits);
+
+  const rows = [];
+
+  for (const unit of units) {
+    let placed = false;
+
+    for (const row of rows) {
+      if (row.count + unit.length <= capacity) {
+        row.units.push(unit);
+        row.count += unit.length;
+        placed = true;
+        break;
+      }
+    }
+
+    if (!placed) {
+      rows.push({
+        count: unit.length,
+        units: [unit],
+      });
+    }
+  }
+
+  return rows.map((row) => row.units.flat());
+}
+
+function groupBadgesByProvider(badges) {
+  const groups = [];
+  let currentGroup = [];
+  let currentProvider = null;
+
+  for (const badge of badges) {
+    const provider = badge.provider || "";
+    if (currentGroup.length === 0 || provider === currentProvider) {
+      currentGroup.push(badge);
+      currentProvider = provider;
+      continue;
+    }
+
+    groups.push(currentGroup);
+    currentGroup = [badge];
+    currentProvider = provider;
+  }
+
+  if (currentGroup.length > 0) {
+    groups.push(currentGroup);
+  }
+
+  return groups;
+}
+
+function compareBadgeUnits(a, b) {
+  if (b.length !== a.length) {
+    return b.length - a.length;
+  }
+
+  const aProvider = a[0]?.provider || "";
+  const bProvider = b[0]?.provider || "";
+  const providerOrder = aProvider.localeCompare(bProvider, "en", { sensitivity: "base" });
+  if (providerOrder !== 0) {
+    return providerOrder;
+  }
+
+  return (a[0]?.name || "").localeCompare(b[0]?.name || "", "en", { sensitivity: "base" });
 }
 
 function decodeHtml(value) {
