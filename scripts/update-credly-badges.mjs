@@ -3,7 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 const README_PATH = process.env.README_PATH || "README.md";
 const PROFILE_URL =
   process.env.CREDLY_PROFILE_URL || "https://www.credly.com/users/duy-khiem";
-const BADGE_LIMIT = Number.parseInt(process.env.CREDLY_BADGE_LIMIT || "6", 10);
+const BADGE_LIMIT = parseBadgeLimit(process.env.CREDLY_BADGE_LIMIT);
 const NAME_FILTER = (process.env.CREDLY_BADGE_FILTER || "").trim().toLowerCase();
 const START_MARKER = "<!-- credly-badges:start -->";
 const END_MARKER = "<!-- credly-badges:end -->";
@@ -24,8 +24,7 @@ async function main() {
   const filteredBadges = NAME_FILTER
     ? badges.filter((badge) => badge.name.toLowerCase().includes(NAME_FILTER))
     : badges;
-  const selectedBadges = filteredBadges
-    .slice(0, BADGE_LIMIT)
+  const selectedBadges = (BADGE_LIMIT > 0 ? filteredBadges.slice(0, BADGE_LIMIT) : filteredBadges)
     .sort(compareBadgesByProvider);
 
   if (selectedBadges.length === 0) {
@@ -36,6 +35,7 @@ async function main() {
     profileUrl: PROFILE_URL,
     count: selectedBadges.length,
     filter: NAME_FILTER,
+    limit: BADGE_LIMIT,
   });
 
   const updated = replaceSection(readme, START_MARKER, END_MARKER, block);
@@ -123,18 +123,19 @@ function renderBadgeBlock(badges, metadata) {
   const items = badges
     .map(
       (badge) =>
-        `  <a href="${badge.url}">\n    <img src="${badge.imageUrl}" width="80" height="80" alt="${escapeHtmlAttribute(badge.name)}" />\n  </a>`,
+        `<a href="${badge.url}"><img src="${badge.imageUrl}" width="80" height="80" alt="${escapeHtmlAttribute(badge.name)}" /></a>`,
     )
-    .join("\n");
+    .join(" ");
 
+  const labelPrefix = metadata.limit > 0 ? `Showing the latest ${metadata.count}` : `Showing all ${metadata.count}`;
   const label = metadata.filter
-    ? `Showing the latest ${metadata.count} public badge(s) matching "${escapeHtml(metadata.filter)}".`
-    : `Showing the latest ${metadata.count} public badge(s) from Credly.`;
+    ? `${labelPrefix} public badge(s) matching "${escapeHtml(metadata.filter)}".`
+    : `${labelPrefix} public badge(s) from Credly.`;
 
   return `${START_MARKER}
 ## Credly Badges
 <p align="center">
-${items}
+  ${items}
 </p>
 <p align="center">
   <sub>${label} Source: <a href="${metadata.profileUrl}">Credly profile</a>.</sub>
@@ -226,6 +227,11 @@ function isCredlyImageUrl(value) {
 
 function buildBadgesApiUrl(profileUrl) {
   return `${profileUrl.replace(/\/+$/, "")}/badges.json`;
+}
+
+function parseBadgeLimit(value) {
+  const parsed = Number.parseInt(value || "0", 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
 }
 
 function decodeHtml(value) {
