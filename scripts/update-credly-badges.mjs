@@ -5,7 +5,7 @@ const PROFILE_URL = (
   process.env.CREDLY_PROFILE_URL || "https://www.credly.com/users/duy-khiem"
 ).trim();
 const BADGE_LIMIT = parsePositiveInteger(process.env.CREDLY_BADGE_LIMIT);
-const BADGES_PER_ROW = parsePositiveInteger(process.env.CREDLY_BADGES_PER_ROW, 4);
+const BADGES_PER_ROW = parsePositiveInteger(process.env.CREDLY_BADGES_PER_ROW, 6);
 const NAME_FILTER = (process.env.CREDLY_BADGE_FILTER || "").trim().toLowerCase();
 const START_MARKER = "<!-- credly-badges:start -->";
 const END_MARKER = "<!-- credly-badges:end -->";
@@ -28,7 +28,7 @@ async function main() {
     : badges;
   const selectedBadges = [
     ...(BADGE_LIMIT > 0 ? filteredBadges.slice(0, BADGE_LIMIT) : filteredBadges),
-  ].sort(compareBadgesByProvider);
+  ].sort(compareBadgesByName);
 
   if (selectedBadges.length === 0) {
     throw new Error("No public badges found from the Credly profile.");
@@ -92,7 +92,6 @@ async function fetchCredlyBadgesFromApi(badgesApiUrl) {
           ["badge_template", "image_url"],
           ["badge_template", "image", "url"],
         ]) || "";
-      const provider = pickBadgeProvider(record);
 
       if (!badgeId || !badgeName || !isCredlyImageUrl(imageUrl)) {
         return null;
@@ -102,7 +101,6 @@ async function fetchCredlyBadgesFromApi(badgesApiUrl) {
         url: `https://www.credly.com/badges/${badgeId}`,
         imageUrl,
         name: decodeHtml(badgeName),
-        provider,
       };
     })
     .filter(Boolean);
@@ -141,39 +139,8 @@ ${rows}
 ${END_MARKER}`;
 }
 
-function compareBadgesByProvider(a, b) {
-  if (a.provider && b.provider) {
-    const providerOrder = a.provider.localeCompare(b.provider, "en", {
-      sensitivity: "base",
-    });
-
-    if (providerOrder !== 0) {
-      return providerOrder;
-    }
-  } else if (a.provider) {
-    return -1;
-  } else if (b.provider) {
-    return 1;
-  }
-
+function compareBadgesByName(a, b) {
   return a.name.localeCompare(b.name, "en", { sensitivity: "base" });
-}
-
-function pickBadgeProvider(record) {
-  const issuerName = pickIssuerName(record?.issuer) || pickIssuerName(record?.badge_template?.issuer);
-  if (issuerName) {
-    return decodeHtml(issuerName);
-  }
-
-  return pickNestedString(record, [["badge_template", "owner_vanity_slug"]]) || "";
-}
-
-function pickIssuerName(issuer) {
-  const entities = Array.isArray(issuer?.entities) ? issuer.entities : [];
-  const primaryEntity = entities.find((entry) => entry?.primary && entry?.entity?.name);
-  const firstEntity = entities.find((entry) => entry?.entity?.name);
-
-  return primaryEntity?.entity?.name || firstEntity?.entity?.name || null;
 }
 
 function pickNestedString(value, paths) {
