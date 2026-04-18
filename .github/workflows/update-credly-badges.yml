@@ -14,7 +14,7 @@ jobs:
     env:
       CREDLY_PROFILE_URL: "https://www.credly.com/users/duy-khiem"
       CREDLY_BADGE_LIMIT: ${{ vars.CREDLY_BADGE_LIMIT || '0' }}
-      CREDLY_BADGES_PER_ROW: ${{ vars.CREDLY_BADGES_PER_ROW || '6' }}
+      CREDLY_BADGES_PER_ROW: ${{ vars.CREDLY_BADGES_PER_ROW || '4' }}
       CREDLY_BADGE_FILTER: ${{ vars.CREDLY_BADGE_FILTER || '' }}
     steps:
       - name: Checkout repository
