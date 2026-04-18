@@ -5,7 +5,7 @@ const PROFILE_URL = (
   process.env.CREDLY_PROFILE_URL || "https://www.credly.com/users/duy-khiem"
 ).trim();
 const BADGE_LIMIT = parsePositiveInteger(process.env.CREDLY_BADGE_LIMIT);
-const BADGE_IMAGE_SIZE = 100;
+const BADGES_PER_ROW = parsePositiveInteger(process.env.CREDLY_BADGES_PER_ROW, 4);
 const NAME_FILTER = (process.env.CREDLY_BADGE_FILTER || "").trim().toLowerCase();
 const START_MARKER = "<!-- credly-badges:start -->";
 const END_MARKER = "<!-- credly-badges:end -->";
@@ -118,10 +118,10 @@ function replaceSection(source, startMarker, endMarker, replacement) {
 }
 
 function renderBadgeBlock(badges, metadata) {
-  const badgeLinks = badges
+  const columnWidth = formatColumnWidth(BADGES_PER_ROW);
+  const rows = chunkArray(badges, BADGES_PER_ROW)
     .map(
-      (badge) =>
-        `  <a href="${escapeHtmlAttribute(badge.url)}"><img src="${escapeHtmlAttribute(badge.imageUrl)}" width="${BADGE_IMAGE_SIZE}" height="${BADGE_IMAGE_SIZE}" alt="${escapeHtmlAttribute(badge.name)}" /></a>`,
+      (row) => `  <tr>\n${renderBadgeCells(row, columnWidth)}\n  </tr>`,
     )
     .join("\n");
 
@@ -132,9 +132,9 @@ function renderBadgeBlock(badges, metadata) {
 
   return `${START_MARKER}
 ## Credly Badges
-<p align="center">
-${badgeLinks}
-</p>
+<table width="100%">
+${rows}
+</table>
 <p align="center">
   <sub>${label} Source: <a href="${escapeHtmlAttribute(metadata.profileUrl)}">Credly profile</a>.</sub>
 </p>
@@ -213,6 +213,34 @@ function parsePositiveInteger(value, fallback = 0) {
 
   const parsed = Number.parseInt(value, 10);
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+}
+
+function chunkArray(items, size) {
+  const chunks = [];
+
+  for (let index = 0; index < items.length; index += size) {
+    chunks.push(items.slice(index, index + size));
+  }
+
+  return chunks;
+}
+
+function renderBadgeCells(row, columnWidth) {
+  const cells = row.map(
+    (badge) =>
+      `    <td align="center" valign="top" width="${columnWidth}"><a href="${escapeHtmlAttribute(badge.url)}"><img src="${escapeHtmlAttribute(badge.imageUrl)}" alt="${escapeHtmlAttribute(badge.name)}" /></a></td>`,
+  );
+
+  while (cells.length < BADGES_PER_ROW) {
+    cells.push(`    <td width="${columnWidth}"></td>`);
+  }
+
+  return cells.join("\n");
+}
+
+function formatColumnWidth(columns) {
+  const width = 100 / columns;
+  return Number.isInteger(width) ? `${width}%` : `${width.toFixed(2)}%`;
 }
 
 function decodeHtml(value) {
