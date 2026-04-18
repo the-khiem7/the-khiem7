@@ -5,7 +5,6 @@ const PROFILE_URL = (
   process.env.CREDLY_PROFILE_URL || "https://www.credly.com/users/duy-khiem"
 ).trim();
 const BADGE_LIMIT = parsePositiveInteger(process.env.CREDLY_BADGE_LIMIT);
-const BADGES_PER_ROW = parsePositiveInteger(process.env.CREDLY_BADGES_PER_ROW, 6);
 const BADGE_IMAGE_SIZE = 100;
 const NAME_FILTER = (process.env.CREDLY_BADGE_FILTER || "").trim().toLowerCase();
 const START_MARKER = "<!-- credly-badges:start -->";
@@ -119,17 +118,11 @@ function replaceSection(source, startMarker, endMarker, replacement) {
 }
 
 function renderBadgeBlock(badges, metadata) {
-  const rows = packBadgeRows(badges, BADGES_PER_ROW)
-    .map((row) => {
-      const cells = row
-        .map(
-          (badge) =>
-            `    <td align="center" width="${BADGE_IMAGE_SIZE}"><a href="${escapeHtmlAttribute(badge.url)}"><img src="${escapeHtmlAttribute(badge.imageUrl)}" width="${BADGE_IMAGE_SIZE}" height="${BADGE_IMAGE_SIZE}" alt="${escapeHtmlAttribute(badge.name)}" /></a></td>`,
-        )
-        .join("\n");
-
-      return `  <tr>\n${cells}\n  </tr>`;
-    })
+  const badgeLinks = badges
+    .map(
+      (badge) =>
+        `  <a href="${escapeHtmlAttribute(badge.url)}"><img src="${escapeHtmlAttribute(badge.imageUrl)}" width="${BADGE_IMAGE_SIZE}" height="${BADGE_IMAGE_SIZE}" alt="${escapeHtmlAttribute(badge.name)}" /></a>`,
+    )
     .join("\n");
 
   const labelPrefix = metadata.limit > 0 ? `Showing ${metadata.count}` : `Showing all ${metadata.count}`;
@@ -139,9 +132,9 @@ function renderBadgeBlock(badges, metadata) {
 
   return `${START_MARKER}
 ## Credly Badges
-<table align="center">
-${rows}
-</table>
+<p align="center">
+${badgeLinks}
+</p>
 <p align="center">
   <sub>${label} Source: <a href="${escapeHtmlAttribute(metadata.profileUrl)}">Credly profile</a>.</sub>
 </p>
@@ -220,119 +213,6 @@ function parsePositiveInteger(value, fallback = 0) {
 
   const parsed = Number.parseInt(value, 10);
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
-}
-
-function chunkArray(items, size) {
-  const chunks = [];
-
-  for (let index = 0; index < items.length; index += size) {
-    chunks.push(items.slice(index, index + size));
-  }
-
-  return chunks;
-}
-
-function packBadgeRows(badges, capacity) {
-  const groupedBadges = groupBadgesByProvider(badges);
-  const units = groupedBadges.flatMap((group) => {
-    const provider = group[0]?.provider || "";
-
-    if (group.length <= capacity) {
-      return [
-        {
-          badges: group,
-          provider,
-          splitIndex: 0,
-        },
-      ];
-    }
-
-    return chunkArray(group, capacity).map((chunk, index) => ({
-      badges: chunk,
-      provider,
-      splitIndex: index,
-    }));
-  });
-
-  // Larger provider groups are packed first to keep rows dense without splitting a provider group.
-  units.sort(compareBadgeUnits);
-
-  const rows = [];
-
-  for (const unit of units) {
-    let bestFitRow = null;
-    let smallestRemainder = Number.POSITIVE_INFINITY;
-
-    for (const row of rows) {
-      const remainder = capacity - row.count - unit.badges.length;
-      if (remainder >= 0 && remainder < smallestRemainder) {
-        bestFitRow = row;
-        smallestRemainder = remainder;
-      }
-    }
-
-    if (bestFitRow) {
-      if (unit.splitIndex > 0) {
-        bestFitRow.units.unshift(unit);
-      } else {
-        bestFitRow.units.push(unit);
-      }
-
-      bestFitRow.count += unit.badges.length;
-      continue;
-    }
-
-    rows.push({
-      count: unit.badges.length,
-      units: [unit],
-    });
-  }
-
-  return rows.map((row) => row.units.flatMap((unit) => unit.badges));
-}
-
-function groupBadgesByProvider(badges) {
-  const groups = [];
-  let currentGroup = [];
-  let currentProvider = null;
-
-  for (const badge of badges) {
-    const provider = badge.provider || "";
-    if (currentGroup.length === 0 || provider === currentProvider) {
-      currentGroup.push(badge);
-      currentProvider = provider;
-      continue;
-    }
-
-    groups.push(currentGroup);
-    currentGroup = [badge];
-    currentProvider = provider;
-  }
-
-  if (currentGroup.length > 0) {
-    groups.push(currentGroup);
-  }
-
-  return groups;
-}
-
-function compareBadgeUnits(a, b) {
-  if (b.badges.length !== a.badges.length) {
-    return b.badges.length - a.badges.length;
-  }
-
-  const providerOrder = a.provider.localeCompare(b.provider, "en", { sensitivity: "base" });
-  if (providerOrder !== 0) {
-    return providerOrder;
-  }
-
-  if (a.splitIndex !== b.splitIndex) {
-    return a.splitIndex - b.splitIndex;
-  }
-
-  return (a.badges[0]?.name || "").localeCompare(b.badges[0]?.name || "", "en", {
-    sensitivity: "base",
-  });
 }
 
 function decodeHtml(value) {
