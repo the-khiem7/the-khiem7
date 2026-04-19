@@ -121,9 +121,7 @@
 ---
 
 <!-- credly-badges:start -->
-
-# Credly Badges
-
+## Credly Badges
 <table width="100%">
   <tr>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/9b564d0d-569c-449f-b084-f2df885c864d"><img src="https://images.credly.com/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob" alt="AWS Educate Introduction to Generative AI - Training Badge" /></a></td>
