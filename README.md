@@ -36,9 +36,10 @@
 ![Ansible](https://img.shields.io/badge/-Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/-Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
 ![CodeMagic](https://img.shields.io/badge/-CodeMagic-F45E3F?style=flat-square&logo=codemagic&logoColor=white)
-`<br>`
 
 ---
+
+> Curious about how systems are designed, built, and operated. From application architecture and distributed workflows to infrastructure, reliability, and applied AI. I enjoy turning ideas into real, production-minded systems through hands-on engineering.
 
 <p align="center">
   <a href="https://www.linkedin.com/in/the-khiem7"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
@@ -47,6 +48,16 @@
 </p>
 
 # Project Portfolio
+
+## 🐍 Flagship Ecosystem
+
+![SnakeAidBanner](banner/SnakeAidBanner.png)
+
+AI-powered emergency snakebite response ecosystem connecting victims, rescuers, snake experts, and healthcare facilities through coordinated rescue operations, expert consultation, AI-assisted snake identification, and evolving knowledge systems.  
+***Built at the intersection of software engineering, infrastructure, and applied AI.***
+
+**Explore the ecosystem**  
+[Frontend](https://github.com/Snake-AID/SnakeAid.Frontend) • [Backend](https://github.com/Snake-AID/SnakeAid.Backend) • [Mobile](https://github.com/Snake-AID/SnakeAid.Mobile) • [Computer Vision](https://github.com/Snake-AID/SnakeAI.ComputerVision) • [Inference Service](https://github.com/Snake-AID/SnakeAI.InferenceService) • [Linux On-Premises Operations](https://github.com/the-khiem7/MyHomeLab.ZimaOS) • [Disaster-Aware Hybrid Architecture](https://github.com/the-khiem7/SnakeAid.AmazonECS) • [RAG Engineering]()
 
 ## 🏆 Hackathon Projects
 
@@ -121,7 +132,9 @@
 ---
 
 <!-- credly-badges:start -->
+
 ## Credly Badges
+
 <table width="100%">
   <tr>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/9b564d0d-569c-449f-b084-f2df885c864d"><img src="https://images.credly.com/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob" alt="AWS Educate Introduction to Generative AI - Training Badge" /></a></td>
