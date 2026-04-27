@@ -59,6 +59,11 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 **Explore the ecosystem**  
 [Frontend](https://github.com/Snake-AID/SnakeAid.Frontend) • [Backend](https://github.com/Snake-AID/SnakeAid.Backend) • [Mobile](https://github.com/Snake-AID/SnakeAid.Mobile) • [Computer Vision](https://github.com/Snake-AID/SnakeAI.ComputerVision) • [Inference Service](https://github.com/Snake-AID/SnakeAI.InferenceService) • [Linux On-Premises Operations](https://github.com/the-khiem7/MyHomeLab.ZimaOS) • [Disaster-Aware Hybrid Architecture](https://github.com/the-khiem7/SnakeAid.AmazonECS) • [RAG Engineering]()
 
+## ☁️ Cloud Engineering Projects - First Cloud AI Journey (program of AWS Vietnam)
+
+- 🚕 **[Manhattan DataWays](https://danielleit241.github.io/aws-workshops/proposal/)** - Event-driven serverless data platform on AWS for cleaning, warehousing, and visualizing Yellow Cab trip data with S3, Step Functions, Lambda, Glue DataBrew, Redshift, Athena, and QuickSight.
+- 📊 **[AWS ClickStream Analytic](https://github.com/SBW-Cloudworks)** - Batch clickstream analytics pipeline on AWS, transforming frontend event data from S3 into a PostgreSQL warehouse with Lambda, EventBridge, and R Shiny dashboards.
+
 ## 🏆 Hackathon Projects
 
 #### Team Projects
@@ -81,11 +86,6 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 
 - 📈 **[SheetFlow](https://github.com/the-khiem7/SheetFlow)** - A structured Google Apps Script system that turns Google Sheets into a lightweight backlog management, task tracking, and daily reporting tool with automated sorting, grouping, and report generation.
 - 🐧 **[PenguinSpace Desktop](https://github.com/the-khiem7/PenguinSpace)** - Desktop tool that helps developers reclaim disk space eaten by WSL distros and Docker storage on Windows.
-
-## ☁️ Cloud Engineering Project – First Cloud AI Journey Program, AWS Vietnam
-
-- 📊 **[AWS ClickStream Analytic](https://github.com/SBW-Cloudworks)** - Batch clickstream analytics pipeline on AWS, transforming frontend event data from S3 into a PostgreSQL warehouse with Lambda, EventBridge, and R Shiny dashboards.
-- 🚕 **[Manhattan DataWays](https://danielleit241.github.io/aws-workshops/proposal/)** - Event-driven serverless data platform on AWS for cleaning, warehousing, and visualizing Yellow Cab trip data with S3, Step Functions, Lambda, Glue DataBrew, Redshift, Athena, and QuickSight.
 
 ## 🐧 Linux
 
