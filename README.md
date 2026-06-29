@@ -53,10 +53,10 @@
 
 ![SnakeAidBanner](banner/SnakeAidBanner.png)
 
-AI-powered emergency snakebite response ecosystem connecting victims, rescuers, snake experts, and healthcare facilities through coordinated rescue operations, expert consultation, AI-assisted snake identification, and evolving knowledge systems.  
+AI-powered emergency snakebite response ecosystem connecting victims, rescuers, snake experts, and healthcare facilities through coordinated rescue operations, expert consultation, AI-assisted snake identification, and evolving knowledge systems.
 ***Built at the intersection of software engineering, infrastructure, and applied AI.***
 
-**Explore the ecosystem**  
+**Explore the ecosystem**
 [Frontend](https://github.com/Snake-AID/SnakeAid.Frontend) • [Backend](https://github.com/Snake-AID/SnakeAid.Backend) • [Mobile](https://github.com/Snake-AID/SnakeAid.Mobile) • [Computer Vision](https://github.com/Snake-AID/SnakeAI.ComputerVision) • [Inference Service](https://github.com/Snake-AID/SnakeAI.InferenceService) • [Linux On-Premises Operations](https://github.com/the-khiem7/MyHomeLab.ZimaOS) • [Disaster-Aware Hybrid Architecture](https://github.com/the-khiem7/SnakeAid.AmazonECS) • [RAG Engineering]()
 
 ## ☁️ Cloud Engineering Projects - First Cloud AI Journey (program of AWS Vietnam)
@@ -71,6 +71,8 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 - 🤝 **[MindForge Labs](https://github.com/mindforge-labs)** - Organization where my team and I ship hackathon prototypes and collaborative MVPs.
 - 🍱 **[OrderLens](https://github.com/mindforge-labs/LotusHack26_OrderLensV2)** ([Devpost](https://devpost.com/software/orderlens)) - AI-powered tray verification system that compares POS orders with tray images using Gemini Vision to catch missing, extra, or incorrect items before handoff. Built for **LotusHacks x HackHarvard x GenAI Fund Vietnam Hackathon**.
 - 📄 **[Finova AI](https://github.com/mindforge-labs/FinovaAI)** ([Devpost](https://devpost.com/software/finova-ai)) - AI-powered loan document intake and verification platform that processes ID cards, payslips, and bank statements with OpenCV, PaddleOCR, and structured extraction before a human review step. Built for **QWEN AI BUILD DAY**.
+- 🎯 **[TalentSync](https://github.com/Vectoris-MHK/TalentSync)** - AI-powered job recommendation platform that transforms a standard MERN job portal with MongoDB Atlas Vector Search and multi-stage aggregation pipelines, delivering personalized, semantic job matching through hybrid content-based and collaborative filtering. Built for **Mongo Hackathon 2026**.
+- 🧠 **[EnterpriseIQ](https://github.com/the-khiem7/EnterpriseIQ)** ([Devpost](https://devpost.com/software/tbd-5s02ov)) - GraphRAG platform that turns siloed enterprise documents into a queryable "Company Brain" using Amazon Aurora PostgreSQL (pgvector + pgRouting) and OpenAI for multi-hop reasoning with auditable, cited answers. Built for **H0: Hack the Zero Stack with Vercel v0 and AWS Databases**.
 
 #### Solo Projects
 
@@ -132,7 +134,9 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 ---
 
 <!-- credly-badges:start -->
+
 ## Credly Badges
+
 <table width="100%">
   <tr>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/9b564d0d-569c-449f-b084-f2df885c864d"><img src="https://images.credly.com/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob" alt="AWS Educate Introduction to Generative AI - Training Badge" /></a></td>
