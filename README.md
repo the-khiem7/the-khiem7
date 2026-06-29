@@ -91,6 +91,11 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 - 📈 **[SheetFlow](https://github.com/the-khiem7/SheetFlow)** - A structured Google Apps Script system that turns Google Sheets into a lightweight backlog management, task tracking, and daily reporting tool with automated sorting, grouping, and report generation.
 - 🐧 **[PenguinSpace Desktop](https://github.com/the-khiem7/PenguinSpace)** - Desktop tool that helps developers reclaim disk space eaten by WSL distros and Docker storage on Windows.
 
+## 🔌 Browser Extensions
+
+- 🚢 **[ChatCargo](https://github.com/the-khiem7/ChatCargo)** - **Privacy-first browser extension that exports AI chat conversations (ChatGPT, Gemini) into structured, lossless Markdown archives locally.** Built with TypeScript, Vite, and Chrome MV3 Manifest using a layered hexagonal architecture with DOM-based extraction, asset resolution, and multi-browser support (Chrome / Firefox). No telemetry, no external servers, no cloud sync — all processing stays in the browser.
+- 📖 **[ChatCargo Skills](https://github.com/the-khiem7/ChatCargoSkills)** - **Agent skill pack (Skills.sh) that transforms raw ChatCargo exports into polished, bilingual Hugo workshop documentation.** Automatically curates screenshots, strips Q&A noise, splits workflows into multi-page tutorials, and generates Vietnamese-first content with English translations for Hugo-based sites.
+
 ## 🐧 Linux
 
 - 🐧 **[Archlinux Endeavour Bootstrap](https://github.com/the-khiem7/archlinux-endeavour-bootstrap)** - Bootstrap script for setting up EndeavourOS and Arch Linux with optional interactive TUI setup phases.
