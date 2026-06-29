@@ -133,6 +133,7 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 ## 🤖 AI-Driven Development Life Cycle
 
 - 🪶 **[Chronicle Composer](https://github.com/the-khiem7/chronicle-composer.git)** - A Git commit composition workflow that turns messy changes into clean, logical commit history that tells the story of a project's development.
+- 📚 **[Baselinedocs Skills](https://github.com/the-khiem7/Baselinedocs-Skills)** - A family of 15 declarative AI-agent skills for creating, syncing, resuming, auditing, and maintaining structured baseline documentation packs that serve as operational memory across development sessions. Organized into five workflow families — **Init**, **Sync**, **Resume**, **Audit**, and **Maintain** — enabling AI agents to pick up where they left off, reconcile documentation drift, and preserve project context across long-running or resumed development workflows.
 
 ## 🎮 Unity Games
 
