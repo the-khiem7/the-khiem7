@@ -63,6 +63,7 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 
 - 🚕 **[Manhattan DataWays](https://danielleit241.github.io/aws-workshops/proposal/)** - Event-driven serverless data platform on AWS for cleaning, warehousing, and visualizing Yellow Cab trip data with S3, Step Functions, Lambda, Glue DataBrew, Redshift, Athena, and QuickSight.
 - 📊 **[AWS ClickStream Analytic](https://github.com/SBW-Cloudworks)** - Batch clickstream analytics pipeline on AWS, transforming frontend event data from S3 into a PostgreSQL warehouse with Lambda, EventBridge, and R Shiny dashboards.
+- 🧠 **[AWS-KnowledgeZone](https://github.com/the-khiem7/AWS-KnowledgeZone)** - 50+ pre-configured AWS MCP Servers for AI-powered coding assistants, providing standardized AWS service access across VS Code, Kilo, Kiro, and OpenCode with drop-in-ready configuration files managed through Astral uv.
 
 ## 🏆 Hackathon Projects
 
