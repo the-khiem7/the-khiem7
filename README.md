@@ -102,6 +102,7 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 
 - 🐍 **[Snake Aid](https://github.com/Snake-AID/SnakeAid.Backend)** - **Unified platform improving snakebite emergency response by connecting patients, rescuers, experts, and administrators with AI identification and coordinated rescue workflows.**
 - 🛍️ **[AlohaMarket](https://github.com/AlohaMarket/AlohaMarket.Aspire)** - **Cloud-native service marketplace built in microservices architecture with .NET Aspire and Kafka.**
+- 🎓 **[MentorX](https://github.com/nguyendinhthanhh/mentorx-be)** - **Spring Boot** modular monolith for a mentor marketplace with job and proposal workflows, escrow-based wallet operations, real-time messaging, dual payment and identity verification, AI features, and full admin moderation.
 - 🛠️ **[EzyFix](https://github.com/EzyFixApp)** - AI-assisted home repair platform with transparent workflows, secure payments, and standardized service operations.
 - 🌸 **[Flower Shop WPF](https://github.com/the-khiem7/FlowerShop.WPF)** - WPF desktop management system for flower shop operations including authentication, catalog, inventory, orders, and reporting.
 - 🎹 **[TTK Piano Center](https://github.com/the-khiem7/TTK_Piano_Center.JSP)** - Java JSP course management system for piano classes, enrollments, carts, and administrative operations.
