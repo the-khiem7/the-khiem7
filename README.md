@@ -51,12 +51,12 @@
 
 ## 🏆 Hackathon Projects
 
-- 🤝 **[MindForge Labs](https://github.com/mindforge-labs)** - Organization where my team and I ship hackathon prototypes and collaborative MVPs.
+- 📡 **[SignalScout](https://github.com/VectorisLabs/SignalScout)** (🥈 **Runner-up**) - Evidence-first multi-agent early-warning system that connects scattered corporate-restructuring signals into one auditable risk story with traceable citations, temporal replay, and deterministic scoring on Amazon Bedrock AgentCore with Strands SDK, Langfuse-driven self-correction, and TinyFish/Apify evidence collection. Built and **won Runner-up** for **2026** **Agentic AI Build Week (AABW) Hackathon**.
+- 🏡 **[CozyHome](https://github.com/the-khiem7/COZYHOME_NaverHackathon2025)** - Student life management hub delivered as a Chrome new-tab experience, built for **Naver Hackathon 2025**.
 - 🍱 **[OrderLens](https://github.com/mindforge-labs/LotusHack26_OrderLensV2)** ([Devpost](https://devpost.com/software/orderlens)) - AI-powered tray verification system that compares POS orders with tray images using Gemini Vision to catch missing, extra, or incorrect items before handoff. Built for **LotusHacks x HackHarvard x GenAI Fund Vietnam Hackathon**.
 - 📄 **[Finova AI](https://github.com/mindforge-labs/FinovaAI)** ([Devpost](https://devpost.com/software/finova-ai)) - AI-powered loan document intake and verification platform that processes ID cards, payslips, and bank statements with OpenCV, PaddleOCR, and structured extraction before a human review step. Built for **QWEN AI BUILD DAY**.
 - 🎯 **[TalentSync](https://github.com/Vectoris-MHK/TalentSync)** - AI-powered job recommendation platform that transforms a standard MERN job portal with MongoDB Atlas Vector Search and multi-stage aggregation pipelines, delivering personalized, semantic job matching through hybrid content-based and collaborative filtering. Built for **Mongo Hackathon 2026**.
 - 🧠 **[EnterpriseIQ](https://github.com/the-khiem7/EnterpriseIQ)** ([Devpost](https://devpost.com/software/tbd-5s02ov)) - GraphRAG platform that turns siloed enterprise documents into a queryable "Company Brain" using Amazon Aurora PostgreSQL (pgvector + pgRouting) and OpenAI for multi-hop reasoning with auditable, cited answers. Built for **H0: Hack the Zero Stack with Vercel v0 and AWS Databases**.
-- 🏡 **[COZYHOME_NaverHackathon2025](https://github.com/the-khiem7/COZYHOME_NaverHackathon2025)** - Student life management hub delivered as a Chrome new-tab experience, built for **Naver Hackathon 2025**.
 
 ## ☁️ AWS First Cloud AI Journey Projects
 
