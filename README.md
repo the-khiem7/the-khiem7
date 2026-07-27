@@ -49,17 +49,16 @@
 
 # Project Portfolio
 
-## 🐍 Flagship Ecosystem
+## 🏆 Hackathon Projects
 
-![SnakeAidBanner](banner/SnakeAidBanner.png)
+- 🤝 **[MindForge Labs](https://github.com/mindforge-labs)** - Organization where my team and I ship hackathon prototypes and collaborative MVPs.
+- 🍱 **[OrderLens](https://github.com/mindforge-labs/LotusHack26_OrderLensV2)** ([Devpost](https://devpost.com/software/orderlens)) - AI-powered tray verification system that compares POS orders with tray images using Gemini Vision to catch missing, extra, or incorrect items before handoff. Built for **LotusHacks x HackHarvard x GenAI Fund Vietnam Hackathon**.
+- 📄 **[Finova AI](https://github.com/mindforge-labs/FinovaAI)** ([Devpost](https://devpost.com/software/finova-ai)) - AI-powered loan document intake and verification platform that processes ID cards, payslips, and bank statements with OpenCV, PaddleOCR, and structured extraction before a human review step. Built for **QWEN AI BUILD DAY**.
+- 🎯 **[TalentSync](https://github.com/Vectoris-MHK/TalentSync)** - AI-powered job recommendation platform that transforms a standard MERN job portal with MongoDB Atlas Vector Search and multi-stage aggregation pipelines, delivering personalized, semantic job matching through hybrid content-based and collaborative filtering. Built for **Mongo Hackathon 2026**.
+- 🧠 **[EnterpriseIQ](https://github.com/the-khiem7/EnterpriseIQ)** ([Devpost](https://devpost.com/software/tbd-5s02ov)) - GraphRAG platform that turns siloed enterprise documents into a queryable "Company Brain" using Amazon Aurora PostgreSQL (pgvector + pgRouting) and OpenAI for multi-hop reasoning with auditable, cited answers. Built for **H0: Hack the Zero Stack with Vercel v0 and AWS Databases**.
+- 🏡 **[COZYHOME_NaverHackathon2025](https://github.com/the-khiem7/COZYHOME_NaverHackathon2025)** - Student life management hub delivered as a Chrome new-tab experience, built for **Naver Hackathon 2025**.
 
-AI-powered emergency snakebite response ecosystem connecting victims, rescuers, snake experts, and healthcare facilities through coordinated rescue operations, expert consultation, AI-assisted snake identification, and evolving knowledge systems.
-***Built at the intersection of software engineering, infrastructure, and applied AI.***
-
-**Explore the ecosystem**
-[Frontend](https://github.com/Snake-AID/SnakeAid.Frontend) • [Backend](https://github.com/Snake-AID/SnakeAid.Backend) • [Mobile](https://github.com/Snake-AID/SnakeAid.Mobile) • [Computer Vision](https://github.com/Snake-AID/SnakeAI.ComputerVision) • [Inference Service](https://github.com/Snake-AID/SnakeAI.InferenceService) • [Linux On-Premises Operations](https://github.com/the-khiem7/MyHomeLab.ZimaOS) • [Disaster-Aware Hybrid Architecture](https://github.com/the-khiem7/SnakeAid.AmazonECS) • [RAG Engineering]()
-
-## ☁️ Cloud Engineering Projects - First Cloud AI Journey (program of AWS Vietnam)
+## ☁️ AWS First Cloud AI Journey Projects
 
 - 📝 **[Hugo Documentation Template](https://github.com/the-khiem7/fcaj-hugo-devcontainer)** - Bilingual (EN/VI) Hugo documentation template with a fully reproducible Dev Container environment, pre-configured with diagram generation (Python `diagrams` library), OCR, image optimization tooling, and automated CI/CD to GitHub Pages.
 - 🚕 **[Manhattan DataWays](https://danielleit241.github.io/aws-workshops/proposal/)** - Event-driven serverless data platform on AWS for cleaning, warehousing, and visualizing Yellow Cab trip data with S3, Step Functions, Lambda, Glue DataBrew, Redshift, Athena, and QuickSight.
@@ -68,26 +67,22 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 - 🔐 **[AWS SCP Workshop](https://github.com/the-khiem7/aws-scp-workshop)** - Hands-on workshop for AWS Organizations SCPs with guardrails, copy-paste policies, and multi-account governance verification workflows.
 - 📋 **[Your First AWS Cert](https://github.com/the-khiem7/your-first-aws-cert)** - 15-step visual guide to register and schedule any AWS Certification exam via Pearson VUE, with annotated screenshots and a pre-submission checklist.
 
-## 🏆 Hackathon Projects
-
-#### Team Projects
-
-- 🤝 **[MindForge Labs](https://github.com/mindforge-labs)** - Organization where my team and I ship hackathon prototypes and collaborative MVPs.
-- 🍱 **[OrderLens](https://github.com/mindforge-labs/LotusHack26_OrderLensV2)** ([Devpost](https://devpost.com/software/orderlens)) - AI-powered tray verification system that compares POS orders with tray images using Gemini Vision to catch missing, extra, or incorrect items before handoff. Built for **LotusHacks x HackHarvard x GenAI Fund Vietnam Hackathon**.
-- 📄 **[Finova AI](https://github.com/mindforge-labs/FinovaAI)** ([Devpost](https://devpost.com/software/finova-ai)) - AI-powered loan document intake and verification platform that processes ID cards, payslips, and bank statements with OpenCV, PaddleOCR, and structured extraction before a human review step. Built for **QWEN AI BUILD DAY**.
-- 🎯 **[TalentSync](https://github.com/Vectoris-MHK/TalentSync)** - AI-powered job recommendation platform that transforms a standard MERN job portal with MongoDB Atlas Vector Search and multi-stage aggregation pipelines, delivering personalized, semantic job matching through hybrid content-based and collaborative filtering. Built for **Mongo Hackathon 2026**.
-- 🧠 **[EnterpriseIQ](https://github.com/the-khiem7/EnterpriseIQ)** ([Devpost](https://devpost.com/software/tbd-5s02ov)) - GraphRAG platform that turns siloed enterprise documents into a queryable "Company Brain" using Amazon Aurora PostgreSQL (pgvector + pgRouting) and OpenAI for multi-hop reasoning with auditable, cited answers. Built for **H0: Hack the Zero Stack with Vercel v0 and AWS Databases**.
-
-#### Solo Projects
-
-- 🏡 **[COZYHOME_NaverHackathon2025](https://github.com/the-khiem7/COZYHOME_NaverHackathon2025)** - Student life management hub delivered as a Chrome new-tab experience, built for **Naver Hackathon 2025**.
-
 ## 🧬 AI Agent Engineering
 
 - 🏗️ **[AgentForge Workshop](https://github.com/the-khiem7/AgentForge_Workshop)** - Vibe-coding production AI agents on Amazon Bedrock AgentCore using Kiro IDE with memory, gateways, observability, Cedar policies, and zero-code harness.
 - 🧪 **[Amazon Bedrock AgentCore](https://github.com/the-khiem7/Amazon-Bedrock-AgentCore)** - 8-lab workshop for production AI agents on Amazon Bedrock AgentCore - memory, gateways, Cognito auth, Cedar policies, and zero-code harness. • [Hands-on Lab](https://github.com/the-khiem7/Amazon-Bedrock-AgentCore-Handon) - Schema-first Customer Support agent with Strands SDK, MCP Streamable HTTP tools, persistent memory, and one-command CDK deployment.
 - 📊 **[AWS MarTech MultiAgent](https://github.com/the-khiem7/AWS-MarTech-MultiAgent)** - Multi-agent system where AI agents orchestrate marketing campaigns across Databricks, CleverTap, and TalonOne using AWS AgentCore, A2A communication, and the Strands framework.
 - 🔍 **[MongoDB Semantic Search Workshop](https://github.com/the-khiem7/MongoDB-SemanticSearch-Workshop)** - Hands-on workshop for building semantic search and recommendation systems using MongoDB Atlas Vector Search, $vectorSearch pipelines, filtering, and scoring.
+
+## 🐍 SnakeAid - Snakebite Incident Emergency Response Ecosystem
+
+![SnakeAidBanner](banner/SnakeAidBanner.png)
+
+AI-powered emergency snakebite response ecosystem connecting victims, rescuers, snake experts, and healthcare facilities through coordinated rescue operations, expert consultation, AI-assisted snake identification, and evolving knowledge systems.
+***Built at the intersection of software engineering, infrastructure, and applied AI.***
+
+**Explore the ecosystem**
+[Frontend](https://github.com/Snake-AID/SnakeAid.Frontend) • [Backend](https://github.com/Snake-AID/SnakeAid.Backend) • [Mobile](https://github.com/Snake-AID/SnakeAid.Mobile) • [Computer Vision](https://github.com/Snake-AID/SnakeAI.ComputerVision) • [Inference Service](https://github.com/Snake-AID/SnakeAI.InferenceService) • [Linux On-Premises Operations](https://github.com/the-khiem7/MyHomeLab.ZimaOS) • [Disaster-Aware Hybrid Architecture](https://github.com/the-khiem7/SnakeAid.AmazonECS) • [RAG Engineering]()
 
 ## ♾️ DevOps & Site Reliability
 
@@ -102,7 +97,7 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 ## 🔌 Browser Extensions
 
 - 🚢 **[ChatCargo](https://github.com/the-khiem7/ChatCargo)** - Privacy-first browser extension that exports AI chat conversations (ChatGPT, Gemini) into structured, lossless Markdown archives locally.
-- 📖 **[ChatCargo Skills](https://github.com/the-khiem7/ChatCargoSkills)** - **Agent skill pack (Skills.sh) that transforms raw ChatCargo exports into polished, bilingual Hugo workshop documentation.** Automatically curates screenshots, strips Q&A noise, splits workflows into multi-page tutorials, and generates Vietnamese-first content with English translations for Hugo-based sites.
+- 📖 **[ChatCargo Skills](https://github.com/the-khiem7/ChatCargoSkills)** - Agent skill pack (Skills.sh) that transforms raw ChatCargo exports into polished, bilingual Hugo workshop documentation.
 
 ## 🐧 Linux
 
@@ -115,7 +110,6 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 
 ## 🛍️ Service Platforms
 
-- 🐍 **[Snake Aid](https://github.com/Snake-AID/SnakeAid.Backend)** - **Unified platform improving snakebite emergency response by connecting patients, rescuers, experts, and administrators with AI identification and coordinated rescue workflows.**
 - 🛍️ **[AlohaMarket](https://github.com/AlohaMarket/AlohaMarket.Aspire)** - **Cloud-native service marketplace built in microservices architecture with .NET Aspire and Kafka.**
 - 🎓 **[MentorX](https://github.com/nguyendinhthanhh/mentorx-be)** - **Spring Boot** modular monolith for a mentor marketplace with job and proposal workflows, escrow-based wallet operations, real-time messaging, dual payment and identity verification, AI features, and full admin moderation.
 - 🛠️ **[EzyFix](https://github.com/EzyFixApp)** - AI-assisted home repair platform with transparent workflows, secure payments, and standardized service operations.
