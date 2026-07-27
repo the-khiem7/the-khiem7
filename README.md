@@ -26,9 +26,9 @@
 ![Nginx](https://img.shields.io/badge/-Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
 ![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
 ![Azure](https://img.shields.io/badge/-Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+![Google Cloud](<https://img.shields.io/badge/-Google%20Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white>)
 ![Cloudflare](https://img.shields.io/badge/-Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
-![Arch Linux](https://img.shields.io/badge/-Arch%20Linux-1793D1?style=flat-square&logo=archlinux&logoColor=white)
+![Arch Linux](<https://img.shields.io/badge/-Arch%20Linux-1793D1?style=flat-square&logo=archlinux&logoColor=white>)
 ![Ubuntu](https://img.shields.io/badge/-Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white)
 ![Grafana](https://img.shields.io/badge/-Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
@@ -65,6 +65,8 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 - 🚕 **[Manhattan DataWays](https://danielleit241.github.io/aws-workshops/proposal/)** - Event-driven serverless data platform on AWS for cleaning, warehousing, and visualizing Yellow Cab trip data with S3, Step Functions, Lambda, Glue DataBrew, Redshift, Athena, and QuickSight.
 - 📊 **[AWS ClickStream Analytic](https://github.com/SBW-Cloudworks)** - Batch clickstream analytics pipeline on AWS, transforming frontend event data from S3 into a PostgreSQL warehouse with Lambda, EventBridge, and R Shiny dashboards.
 - 🧠 **[AWS-KnowledgeZone](https://github.com/the-khiem7/AWS-KnowledgeZone)** - 50+ pre-configured AWS MCP Servers for AI-powered coding assistants, providing standardized AWS service access across VS Code, Kilo, Kiro, and OpenCode with drop-in-ready configuration files managed through Astral uv.
+- 🔐 **[AWS SCP Workshop](https://github.com/the-khiem7/aws-scp-workshop)** - Hands-on workshop for AWS Organizations SCPs with guardrails, copy-paste policies, and multi-account governance verification workflows.
+- 📋 **[Your First AWS Cert](https://github.com/the-khiem7/your-first-aws-cert)** - 15-step visual guide to register and schedule any AWS Certification exam via Pearson VUE, with annotated screenshots and a pre-submission checklist.
 
 ## 🏆 Hackathon Projects
 
@@ -80,9 +82,15 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 
 - 🏡 **[COZYHOME_NaverHackathon2025](https://github.com/the-khiem7/COZYHOME_NaverHackathon2025)** - Student life management hub delivered as a Chrome new-tab experience, built for **Naver Hackathon 2025**.
 
+## 🧬 AI Agent Engineering
+
+- 🏗️ **[AgentForge Workshop](https://github.com/the-khiem7/AgentForge_Workshop)** - Vibe-coding production AI agents on Amazon Bedrock AgentCore using Kiro IDE with memory, gateways, observability, Cedar policies, and zero-code harness.
+- 🧪 **[Amazon Bedrock AgentCore](https://github.com/the-khiem7/Amazon-Bedrock-AgentCore)** - 8-lab workshop for production AI agents on Amazon Bedrock AgentCore - memory, gateways, Cognito auth, Cedar policies, and zero-code harness. • [Hands-on Lab](https://github.com/the-khiem7/Amazon-Bedrock-AgentCore-Handon) - Schema-first Customer Support agent with Strands SDK, MCP Streamable HTTP tools, persistent memory, and one-command CDK deployment.
+- 📊 **[AWS MarTech MultiAgent](https://github.com/the-khiem7/AWS-MarTech-MultiAgent)** - Multi-agent system where AI agents orchestrate marketing campaigns across Databricks, CleverTap, and TalonOne using AWS AgentCore, A2A communication, and the Strands framework.
+- 🔍 **[MongoDB Semantic Search Workshop](https://github.com/the-khiem7/MongoDB-SemanticSearch-Workshop)** - Hands-on workshop for building semantic search and recommendation systems using MongoDB Atlas Vector Search, $vectorSearch pipelines, filtering, and scoring.
+
 ## ♾️ DevOps & Site Reliability
 
-- 🩺 **[GO! Uptime]()** - **Lightweight Golang-powered uptime monitor to track your services in real time, notify you instantly about downtime, and share simple public status pages from one dashboard.**
 - 🐧 **[Zima Linux Homelab](https://github.com/the-khiem7/MyHomeLab.ZimaOS)** - Personal ZimaOS homelab for containers, reverse proxies, tunnels, and self-hosted services.
 - 🐳 **[Jenkins Docker Builder](https://github.com/the-khiem7/jenkins-docker-builder)** - Practical guide to running Jenkins with Docker, covering Docker-in-Docker builds and secure deployments behind an Nginx reverse proxy in a self-hosted environment.
 
@@ -93,7 +101,7 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 
 ## 🔌 Browser Extensions
 
-- 🚢 **[ChatCargo](https://github.com/the-khiem7/ChatCargo)** - **Privacy-first browser extension that exports AI chat conversations (ChatGPT, Gemini) into structured, lossless Markdown archives locally.** Built with TypeScript, Vite, and Chrome MV3 Manifest using a layered hexagonal architecture with DOM-based extraction, asset resolution, and multi-browser support (Chrome / Firefox). No telemetry, no external servers, no cloud sync — all processing stays in the browser.
+- 🚢 **[ChatCargo](https://github.com/the-khiem7/ChatCargo)** - Privacy-first browser extension that exports AI chat conversations (ChatGPT, Gemini) into structured, lossless Markdown archives locally.
 - 📖 **[ChatCargo Skills](https://github.com/the-khiem7/ChatCargoSkills)** - **Agent skill pack (Skills.sh) that transforms raw ChatCargo exports into polished, bilingual Hugo workshop documentation.** Automatically curates screenshots, strips Q&A noise, splits workflows into multi-page tutorials, and generates Vietnamese-first content with English translations for Hugo-based sites.
 
 ## 🐧 Linux
@@ -134,6 +142,8 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 
 - 🪶 **[Chronicle Composer](https://github.com/the-khiem7/chronicle-composer.git)** - A Git commit composition workflow that turns messy changes into clean, logical commit history that tells the story of a project's development.
 - 📚 **[Baselinedocs Skills](https://github.com/the-khiem7/Baselinedocs-Skills)** - A family of 15 declarative AI-agent skills for creating, syncing, resuming, auditing, and maintaining structured baseline documentation packs that serve as operational memory across development sessions. Organized into five workflow families — **Init**, **Sync**, **Resume**, **Audit**, and **Maintain** — enabling AI agents to pick up where they left off, reconcile documentation drift, and preserve project context across long-running or resumed development workflows.
+- 🎯 **[AWS AI-DLC](https://github.com/the-khiem7/aws-aidlc)** - Structured, adaptive software development workflow for AI coding agents, guiding them from raw idea to working, tested code through Inception, Construction, and Operations phases with a full audit trail.
+- 🔌 **[Codex AWS Plugin](https://github.com/the-khiem7/codex-aws-plugin)** - Three-step Codex Desktop guide to register the aws/agent-toolkit-for-aws marketplace and install AWS Core, AI Agents, Data Analytics, and DevOps plugins.
 
 ## 🎮 Unity Games
 
