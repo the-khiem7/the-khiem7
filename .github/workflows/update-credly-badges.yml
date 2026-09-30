@@ -5,35 +5,43 @@ on:
   schedule:
     - cron: "0 1 * * *"
 
-permissions:
-  contents: write
+# A manual run overlapping the cron run would race on git push.
+concurrency:
+  group: credly-badges
+  cancel-in-progress: false
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-    env:
-      CREDLY_PROFILE_URL: "https://www.credly.com/users/duy-khiem"
-      CREDLY_USER_ID: "789141e9-d22e-40d4-bdf3-a9fd0f603f17"
-      CREDLY_BADGE_LIMIT: ${{ vars.CREDLY_BADGE_LIMIT || '0' }}
-      CREDLY_BADGES_PER_ROW: ${{ vars.CREDLY_BADGES_PER_ROW || '4' }}
-      CREDLY_BADGE_FILTER: ${{ vars.CREDLY_BADGE_FILTER || '' }}
+    timeout-minutes: 5
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
-          node-version: "20"
+          node-version: "22"
+
+      - name: Run tests
+        run: node --test "scripts/*.test.mjs"
 
       - name: Sync Credly badges into README
+        env:
+          CREDLY_PROFILE_URL: "https://www.credly.com/users/duy-khiem"
+          CREDLY_USER_ID: "789141e9-d22e-40d4-bdf3-a9fd0f603f17"
+          CREDLY_BADGE_LIMIT: ${{ vars.CREDLY_BADGE_LIMIT || '0' }}
+          CREDLY_BADGES_PER_ROW: ${{ vars.CREDLY_BADGES_PER_ROW || '4' }}
+          CREDLY_BADGE_FILTER: ${{ vars.CREDLY_BADGE_FILTER || '' }}
         run: node scripts/update-credly-badges.mjs
 
       - name: Commit README changes
         run: |
+          git diff --quiet -- README.md && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --cached --quiet && exit 0
           git commit -m "chore: update Credly badges"
           git push
