@@ -147,29 +147,52 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 ---
 
 <!-- credly-badges:start -->
-## Credly Badges
+## AWS Certified
+<table align="center" width="100%">
+  <tr>
+    <td align="center" valign="top" width="100%"><a href="https://www.credly.com/badges/0353f466-5e29-4134-aab7-723cc0b8e78b"><img src="https://images.credly.com/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png" alt="AWS Certified AI Practitioner" width="200" /></a></td>
+  </tr>
+</table>
+
+## Solace Certified
 <table width="100%">
   <tr>
-    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/0353f466-5e29-4134-aab7-723cc0b8e78b"><img src="https://images.credly.com/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png" alt="AWS Certified AI Practitioner" /></a></td>
+    <td align="center" valign="top" width="25%"><a href="https://www.credential.net/f8aed656-cdfb-4269-a333-d9105ed935fc"><img src="https://images.credly.com/images/1ea7c967-16e5-4c76-94b5-8516235b8bf0/cfdhuotq_1790576730567_badge_cached_image_20260928-32-2ylws1.png" alt="Solace Certified Agent Mesh Practitioner" /></a></td>
+    <td align="center" valign="top" width="25%"><a href="https://www.credential.net/6883f857-5be2-4818-898c-4895f005d9c7"><img src="https://images.credly.com/images/d621a3c2-5121-41d1-b63d-5e71b83e68f9/n56i0uuj_1790563367490_badge_cached_image_20260928-33-7mz3yy.png" alt="Solace Certified Developer Practitioner" /></a></td>
+    <td align="center" valign="top" width="25%"><a href="https://www.credential.net/5f9ba213-b06d-4643-b8d7-59acef84dd1a"><img src="https://images.credly.com/images/190af13a-de31-4add-b49d-d2f53f07f3fa/master_cached_image_20260929-32-dacurv.png" alt="Solace Certified Event Driven Architecture Practitioner" /></a></td>
+    <td align="center" valign="top" width="25%"><a href="https://www.credential.net/677dc3e4-8460-4cec-b07d-e40f5ae597de"><img src="https://images.credly.com/images/9727aee4-2f58-4dc4-8bbb-93ea8fdb00f0/pab8g65t_1790534132672_badge_cached_image_20260928-33-fvg6zg.png" alt="Solace Certified Integration Associate" /></a></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="25%"><a href="https://www.credential.net/9caa232c-352f-4b91-9b03-ca9cdf713d7a"><img src="https://images.credly.com/images/39e6e304-8d5f-4e52-8e8e-9793851957ea/master_cached_image_20260930-33-ct5gpz.png" alt="Solace Certified Partner Ambassador" /></a></td>
+    <td align="center" valign="top" width="25%"><a href="https://www.credential.net/fab38bb2-e4fe-4f68-aa2e-f609828234ed"><img src="https://images.credly.com/images/42bff30f-e7f6-4df6-8feb-023351587cc7/master_cached_image_20260930-33-c4kv7l.png" alt="Solace Certified Solutions Consultant" /></a></td>
+    <td width="25%"></td>
+    <td width="25%"></td>
+  </tr>
+</table>
+
+## Other Credentials
+<table width="100%">
+  <tr>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/9b564d0d-569c-449f-b084-f2df885c864d"><img src="https://images.credly.com/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob" alt="AWS Educate Introduction to Generative AI - Training Badge" /></a></td>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/e8d06825-f0a7-49e2-8c66-5cd8d558b5b6"><img src="https://images.credly.com/images/b870667f-00a3-48d7-b988-9c02b441b883/image.png" alt="Well-Architected Proficient" /></a></td>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/7ecfdb12-7dee-4a56-bc7a-8d96bc5f00cd"><img src="https://images.credly.com/images/5bd2d506-c95c-4766-a5b1-8da62a3a23b2/blob" alt="Google AI Professional Certificate" /></a></td>
+    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/6c255afe-1f8c-49ae-ab56-22e1023a09bf"><img src="https://images.credly.com/images/fd5cd35b-6c0d-4946-9010-fcb3b4ad0839/blob" alt="Core Skills Learning Path" /></a></td>
   </tr>
   <tr>
-    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/6c255afe-1f8c-49ae-ab56-22e1023a09bf"><img src="https://images.credly.com/images/fd5cd35b-6c0d-4946-9010-fcb3b4ad0839/blob" alt="Core Skills Learning Path" /></a></td>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/918fb908-5caa-40ad-8c39-3ba1b23f9810"><img src="https://images.credly.com/images/e4c38805-e2fd-469c-83fc-8dab303be440/blob" alt="Kubernetes Monitoring Learning Path" /></a></td>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/64009072-fb78-403a-b0d1-937b1fc9dcc9"><img src="https://images.credly.com/images/2677386a-c65f-4d4d-89f2-5b0babbc77d2/KickoffAgileBadge.png" alt="Fundamentals of Agile Project Management" /></a></td>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/6b27bb90-64cc-4f51-a659-d4932593922b"><img src="https://images.credly.com/images/a13653a5-3902-4eb9-96ca-790f6b535d4e/blob" alt="LFS148: Getting Started with OpenTelemetry" /></a></td>
+    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/91457304-5984-4eb2-9b0e-e580f64fb365"><img src="https://images.credly.com/images/2397c05c-eb0e-4b08-be97-9e8261d43125/blob" alt="LFS162: Introduction to DevOps and Site Reliability Engineering" /></a></td>
   </tr>
   <tr>
-    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/91457304-5984-4eb2-9b0e-e580f64fb365"><img src="https://images.credly.com/images/2397c05c-eb0e-4b08-be97-9e8261d43125/blob" alt="LFS162: Introduction to DevOps and Site Reliability Engineering" /></a></td>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/8f1abdcf-62c6-497b-9c5a-7bd3d76bbd79"><img src="https://images.credly.com/images/0f5127c3-639b-47f2-abca-01107591c639/blob" alt="LFS167: Introduction to Jenkins" /></a></td>
+    <td width="25%"></td>
     <td width="25%"></td>
     <td width="25%"></td>
   </tr>
 </table>
 <p align="center">
-  <sub>Showing all 10 public badge(s) from Credly. Source: <a href="https://www.credly.com/users/duy-khiem">Credly profile</a>.</sub>
+  <sub>Showing 16 public badge(s) from Credly. Source: <a href="https://www.credly.com/users/duy-khiem">Credly profile</a>.</sub>
 </p>
 <!-- credly-badges:end -->
 
