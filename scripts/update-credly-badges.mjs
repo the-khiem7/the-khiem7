@@ -4,8 +4,12 @@ const README_PATH = process.env.README_PATH || "README.md";
 const PROFILE_URL = (
   process.env.CREDLY_PROFILE_URL || "https://www.credly.com/users/duy-khiem"
 ).trim();
+const USER_ID = (
+  process.env.CREDLY_USER_ID || "789141e9-d22e-40d4-bdf3-a9fd0f603f17"
+).trim();
 const BADGE_LIMIT = parsePositiveInteger(process.env.CREDLY_BADGE_LIMIT);
-const BADGES_PER_ROW = parsePositiveInteger(process.env.CREDLY_BADGES_PER_ROW, 6);
+const BADGES_PER_ROW = parsePositiveInteger(process.env.CREDLY_BADGES_PER_ROW, 4);
+const PAGE_SIZE = 48;
 const NAME_FILTER = (process.env.CREDLY_BADGE_FILTER || "").trim().toLowerCase();
 const START_MARKER = "<!-- credly-badges:start -->";
 const END_MARKER = "<!-- credly-badges:end -->";
@@ -22,23 +26,53 @@ async function main() {
     return;
   }
 
-  const badges = await fetchCredlyBadges(PROFILE_URL);
+  const [credlyBadges, externalBadges] = await Promise.all([
+    fetchCredlyBadges(PROFILE_URL),
+    fetchExternalBadges(USER_ID),
+  ]);
+
+  // Certifications and externally uploaded badges are always shown; the
+  // filter and limit only shape the general Credly Badges section.
+  const awsCertified = credlyBadges
+    .filter((badge) => badge.isAwsCertification)
+    .sort(compareBadgesByProviderThenName);
+  const generalBadges = credlyBadges.filter((badge) => !badge.isAwsCertification);
   const filteredBadges = NAME_FILTER
-    ? badges.filter((badge) => badge.name.toLowerCase().includes(NAME_FILTER))
-    : badges;
+    ? generalBadges.filter((badge) => badge.name.toLowerCase().includes(NAME_FILTER))
+    : generalBadges;
   const selectedBadges = [
     ...(BADGE_LIMIT > 0 ? filteredBadges.slice(0, BADGE_LIMIT) : filteredBadges),
   ].sort(compareBadgesByProviderThenName);
 
-  if (selectedBadges.length === 0) {
+  const sections = [];
+  if (awsCertified.length > 0) {
+    // Fewer certs than a full row: shrink the table to the cert count so the cells stay centered.
+    sections.push({
+      title: "AWS Certified",
+      badges: awsCertified,
+      columns: Math.min(awsCertified.length, BADGES_PER_ROW),
+      // Wide cells would stretch the image to the full cell width; pin it near a normal cell size.
+      imageWidth: 200,
+      centered: true,
+    });
+  }
+  for (const [issuer, badges] of groupByProvider(externalBadges)) {
+    sections.push({
+      title: `${issuer} Certified`,
+      badges: badges.sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" })),
+    });
+  }
+  if (selectedBadges.length > 0) {
+    sections.push({ title: "Other Credentials", badges: selectedBadges });
+  }
+
+  if (sections.length === 0) {
     throw new Error("No public badges found from the Credly profile.");
   }
 
-  const block = renderBadgeBlock(selectedBadges, {
+  const block = renderBadgeBlock(sections, {
     profileUrl: PROFILE_URL,
-    count: selectedBadges.length,
-    filter: NAME_FILTER,
-    limit: BADGE_LIMIT,
+    count: sections.reduce((total, section) => total + section.badges.length, 0),
   });
 
   const updated = replaceSection(readme, START_MARKER, END_MARKER, block);
@@ -48,16 +82,61 @@ async function main() {
   }
 
   await writeFile(README_PATH, updated, "utf8");
-  console.log(`Updated ${README_PATH} with ${selectedBadges.length} Credly badge(s).`);
+  console.log(
+    `Updated ${README_PATH}: ${awsCertified.length} AWS certified, ${externalBadges.length} external, ${selectedBadges.length} other Credly badge(s).`,
+  );
+}
+
+async function fetchExternalBadges(userId) {
+  if (!userId) {
+    return [];
+  }
+
+  const url = `https://www.credly.com/api/v1/users/${encodeURIComponent(userId)}/external_badges/open_badges/public?page=1&page_size=${PAGE_SIZE}`;
+  const response = await fetch(url, {
+    headers: {
+      "user-agent": "github-actions-credly-badge-sync",
+      accept: "application/json",
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Credly external badges request failed with HTTP ${response.status}: ${url}`);
+  }
+
+  const payload = await response.json();
+  const records = Array.isArray(payload?.data) ? payload.data : [];
+
+  return records
+    .map((record) => {
+      const badge = record?.external_badge;
+      const name = typeof badge?.badge_name === "string" ? badge.badge_name.trim() : "";
+      const imageUrl = typeof badge?.image_url === "string" ? badge.image_url.trim() : "";
+      const badgeUrl = typeof badge?.badge_url === "string" ? badge.badge_url.trim() : "";
+      const provider = typeof badge?.issuer_name === "string" ? badge.issuer_name.trim() : "";
+
+      if (record?.public === false || !name || !provider || !/^https:\/\//i.test(badgeUrl) || !isCredlyImageUrl(imageUrl)) {
+        return null;
+      }
+
+      return { url: badgeUrl, imageUrl, name: decodeHtml(name), provider: decodeHtml(provider) };
+    })
+    .filter(Boolean);
+}
+
+function groupByProvider(badges) {
+  const groups = new Map();
+
+  for (const badge of badges) {
+    groups.set(badge.provider, [...(groups.get(badge.provider) || []), badge]);
+  }
+
+  return [...groups.entries()].sort(([a], [b]) => a.localeCompare(b, "en", { sensitivity: "base" }));
 }
 
 async function fetchCredlyBadges(profileUrl) {
   const badgesApiUrl = buildBadgesApiUrl(profileUrl);
   const badges = await fetchCredlyBadgesFromApi(badgesApiUrl);
-  if (badges.length === 0) {
-    throw new Error(`No public badges found from ${badgesApiUrl}`);
-  }
-
   return badges;
 }
 
@@ -103,6 +182,7 @@ async function fetchCredlyBadgesFromApi(badgesApiUrl) {
         imageUrl,
         name: decodeHtml(badgeName),
         provider,
+        isAwsCertification: isAwsCertification(record),
       };
     })
     .filter(Boolean);
@@ -117,26 +197,42 @@ function replaceSection(source, startMarker, endMarker, replacement) {
   return source.replace(pattern, replacement);
 }
 
-function renderBadgeBlock(badges, metadata) {
-  const columnWidth = formatColumnWidth(BADGES_PER_ROW);
-  const rows = chunkArray(badges, BADGES_PER_ROW)
+// Paid AWS certifications are the only AWS badges Credly types as "Certification";
+// learning and training badges from the same owner are typed "Learning".
+function isAwsCertification(record) {
+  const category = pickNestedString(record, [["badge_template", "type_category"]]) || "";
+  const owner = pickNestedString(record, [["badge_template", "owner_vanity_slug"]]) || "";
+
+  return category.toLowerCase() === "certification" && owner === "amazon-web-services";
+}
+
+function renderBadgeTable(badges, options = {}) {
+  const columns = options.columns || BADGES_PER_ROW;
+  const imageWidth = options.imageWidth || 0;
+  const columnWidth = formatColumnWidth(columns);
+  const rows = chunkArray(badges, columns)
     .map(
-      (row) => `  <tr>\n${renderBadgeCells(row, columnWidth)}\n  </tr>`,
+      (row) => `  <tr>\n${renderBadgeCells(row, columnWidth, columns, imageWidth)}\n  </tr>`,
     )
     .join("\n");
 
-  const labelPrefix = metadata.limit > 0 ? `Showing ${metadata.count}` : `Showing all ${metadata.count}`;
-  const label = metadata.filter
-    ? `${labelPrefix} public badge(s) matching "${escapeHtml(metadata.filter)}".`
-    : `${labelPrefix} public badge(s) from Credly.`;
+  // GitHub sizes tables to their content, so a narrow table hugs the left edge unless align="center" is set.
+  const alignAttribute = options.centered ? ' align="center"' : "";
+
+  return `<table${alignAttribute} width="100%">
+${rows}
+</table>`;
+}
+
+function renderBadgeBlock(sections, metadata) {
+  const body = sections
+    .map((section) => `## ${escapeHtml(section.title)}\n${renderBadgeTable(section.badges, section)}`)
+    .join("\n\n");
 
   return `${START_MARKER}
-## Credly Badges
-<table width="100%">
-${rows}
-</table>
+${body}
 <p align="center">
-  <sub>${label} Source: <a href="${escapeHtmlAttribute(metadata.profileUrl)}">Credly profile</a>.</sub>
+  <sub>Showing ${metadata.count} public badge(s) from Credly. Source: <a href="${escapeHtmlAttribute(metadata.profileUrl)}">Credly profile</a>.</sub>
 </p>
 ${END_MARKER}`;
 }
@@ -225,13 +321,14 @@ function chunkArray(items, size) {
   return chunks;
 }
 
-function renderBadgeCells(row, columnWidth) {
+function renderBadgeCells(row, columnWidth, columns, imageWidth) {
+  const widthAttribute = imageWidth > 0 ? ` width="${imageWidth}"` : "";
   const cells = row.map(
     (badge) =>
-      `    <td align="center" valign="top" width="${columnWidth}"><a href="${escapeHtmlAttribute(badge.url)}"><img src="${escapeHtmlAttribute(badge.imageUrl)}" alt="${escapeHtmlAttribute(badge.name)}" /></a></td>`,
+      `    <td align="center" valign="top" width="${columnWidth}"><a href="${escapeHtmlAttribute(badge.url)}"><img src="${escapeHtmlAttribute(badge.imageUrl)}" alt="${escapeHtmlAttribute(badge.name)}"${widthAttribute} /></a></td>`,
   );
 
-  while (cells.length < BADGES_PER_ROW) {
+  while (cells.length < columns) {
     cells.push(`    <td width="${columnWidth}"></td>`);
   }
 

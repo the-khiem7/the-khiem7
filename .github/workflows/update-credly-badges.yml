@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CREDLY_PROFILE_URL: "https://www.credly.com/users/duy-khiem"
+      CREDLY_USER_ID: "789141e9-d22e-40d4-bdf3-a9fd0f603f17"
       CREDLY_BADGE_LIMIT: ${{ vars.CREDLY_BADGE_LIMIT || '0' }}
       CREDLY_BADGES_PER_ROW: ${{ vars.CREDLY_BADGES_PER_ROW || '4' }}
       CREDLY_BADGE_FILTER: ${{ vars.CREDLY_BADGE_FILTER || '' }}
