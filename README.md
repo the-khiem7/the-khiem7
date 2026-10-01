@@ -150,7 +150,8 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 ## AWS Certified
 <table align="center" width="100%">
   <tr>
-    <td align="center" valign="top" width="100%"><a href="https://www.credly.com/badges/0353f466-5e29-4134-aab7-723cc0b8e78b"><img src="https://images.credly.com/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png" alt="AWS Certified AI Practitioner" width="200" /></a></td>
+    <td align="center" valign="top" width="50%"><a href="https://www.credly.com/badges/0353f466-5e29-4134-aab7-723cc0b8e78b"><img src="https://images.credly.com/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png" alt="AWS Certified AI Practitioner" width="200" /></a></td>
+    <td align="center" valign="top" width="50%"><a href="https://www.credly.com/badges/b45329b0-0ee4-4a7c-85c8-3a6b6435310c"><img src="https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" alt="AWS Certified Cloud Practitioner" width="200" /></a></td>
   </tr>
 </table>
 
@@ -198,7 +199,7 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
   </tr>
 </table>
 <p align="center">
-  <sub>Showing 22 public badge(s) from Credly. Source: <a href="https://www.credly.com/users/duy-khiem">Credly profile</a>.</sub>
+  <sub>Showing 23 public badge(s) from Credly. Source: <a href="https://www.credly.com/users/duy-khiem">Credly profile</a>.</sub>
 </p>
 <!-- credly-badges:end -->
 
