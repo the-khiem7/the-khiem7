@@ -155,7 +155,24 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
   </tr>
 </table>
 
+## AWS Partner Credentials
+<table width="100%">
+  <tr>
+    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/29a2039f-da12-4556-9352-bf3d6ffcf65e"><img src="https://images.credly.com/images/c5a5506c-0b33-4fcc-9d6e-c81eac6a2a6a/blob" alt="AWS Partner: DevOps Essentials" /></a></td>
+    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/d5337f97-19af-41d0-908f-b5e8486033af"><img src="https://images.credly.com/images/8f006312-3154-45bf-a845-4a043641e83c/blob" alt="AWS Partner: Technical Accredited - Training Badge" /></a></td>
+    <td width="25%"></td>
+    <td width="25%"></td>
+  </tr>
+</table>
+
 ## Solace Certified
+<table align="center" width="100%">
+  <tr>
+    <td align="center" valign="top" width="50%"><a href="https://www.credential.net/677dc3e4-8460-4cec-b07d-e40f5ae597de"><img src="https://images.credly.com/images/9727aee4-2f58-4dc4-8bbb-93ea8fdb00f0/pab8g65t_1790534132672_badge_cached_image_20260928-33-fvg6zg.png" alt="Solace Certified Integration Associate" width="200" /></a></td>
+    <td align="center" valign="top" width="50%"><a href="https://www.credential.net/9caa232c-352f-4b91-9b03-ca9cdf713d7a"><img src="https://images.credly.com/images/39e6e304-8d5f-4e52-8e8e-9793851957ea/master_cached_image_20260930-33-ct5gpz.png" alt="Solace Certified Partner Ambassador" width="200" /></a></td>
+  </tr>
+</table>
+
 <table width="100%">
   <tr>
     <td align="center" valign="top" width="25%"><a href="https://www.credential.net/f8aed656-cdfb-4269-a333-d9105ed935fc"><img src="https://images.credly.com/images/1ea7c967-16e5-4c76-94b5-8516235b8bf0/cfdhuotq_1790576730567_badge_cached_image_20260928-32-2ylws1.png" alt="Solace Certified Agent Mesh Practitioner" /></a></td>
@@ -166,13 +183,7 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
   <tr>
     <td align="center" valign="top" width="25%"><a href="https://www.credential.net/f93dcb9d-4506-4ca1-8f50-d992255f78e8"><img src="https://images.credly.com/images/78e19dbf-dcef-40d2-8681-01e81f4fdf01/master_cached_image_20260930-33-6m6kla.png" alt="Solace Certified Event Driven Integration - MuleSoft" /></a></td>
     <td align="center" valign="top" width="25%"><a href="https://www.credential.net/d8e21714-9e87-4b29-ab22-00144f9ff59a"><img src="https://images.credly.com/images/eaaeaad9-4b22-482d-bc9c-9baa599bcd2d/master_cached_image_20260930-30-a3g8bd.png" alt="Solace Certified Event Driven Integration - SAP" /></a></td>
-    <td align="center" valign="top" width="25%"><a href="https://www.credential.net/677dc3e4-8460-4cec-b07d-e40f5ae597de"><img src="https://images.credly.com/images/9727aee4-2f58-4dc4-8bbb-93ea8fdb00f0/pab8g65t_1790534132672_badge_cached_image_20260928-33-fvg6zg.png" alt="Solace Certified Integration Associate" /></a></td>
-    <td align="center" valign="top" width="25%"><a href="https://www.credential.net/9caa232c-352f-4b91-9b03-ca9cdf713d7a"><img src="https://images.credly.com/images/39e6e304-8d5f-4e52-8e8e-9793851957ea/master_cached_image_20260930-33-ct5gpz.png" alt="Solace Certified Partner Ambassador" /></a></td>
-  </tr>
-  <tr>
     <td align="center" valign="top" width="25%"><a href="https://www.credential.net/fab38bb2-e4fe-4f68-aa2e-f609828234ed"><img src="https://images.credly.com/images/42bff30f-e7f6-4df6-8feb-023351587cc7/master_cached_image_20260930-33-c4kv7l.png" alt="Solace Certified Solutions Consultant" /></a></td>
-    <td width="25%"></td>
-    <td width="25%"></td>
     <td width="25%"></td>
   </tr>
 </table>
@@ -186,26 +197,26 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/01f9f1bd-812f-46d0-87a4-5e3c9b8a1595"><img src="https://images.credly.com/images/478cdcb9-9b92-4893-9c95-617ad0f28257/blob" alt="AWS Knowledge: Security Champion - Training Badge" /></a></td>
   </tr>
   <tr>
-    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/29a2039f-da12-4556-9352-bf3d6ffcf65e"><img src="https://images.credly.com/images/c5a5506c-0b33-4fcc-9d6e-c81eac6a2a6a/blob" alt="AWS Partner: DevOps Essentials" /></a></td>
-    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/d5337f97-19af-41d0-908f-b5e8486033af"><img src="https://images.credly.com/images/8f006312-3154-45bf-a845-4a043641e83c/blob" alt="AWS Partner: Technical Accredited - Training Badge" /></a></td>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/e8d06825-f0a7-49e2-8c66-5cd8d558b5b6"><img src="https://images.credly.com/images/b870667f-00a3-48d7-b988-9c02b441b883/image.png" alt="Well-Architected Proficient" /></a></td>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/7ecfdb12-7dee-4a56-bc7a-8d96bc5f00cd"><img src="https://images.credly.com/images/782f33e7-c4b5-4d1d-a7ce-02f25b7b9a1e/blob" alt="Google AI Professional Certificate" /></a></td>
-  </tr>
-  <tr>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/6c255afe-1f8c-49ae-ab56-22e1023a09bf"><img src="https://images.credly.com/images/fd5cd35b-6c0d-4946-9010-fcb3b4ad0839/blob" alt="Core Skills Learning Path" /></a></td>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/918fb908-5caa-40ad-8c39-3ba1b23f9810"><img src="https://images.credly.com/images/e4c38805-e2fd-469c-83fc-8dab303be440/blob" alt="Kubernetes Monitoring Learning Path" /></a></td>
-    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/64009072-fb78-403a-b0d1-937b1fc9dcc9"><img src="https://images.credly.com/images/2677386a-c65f-4d4d-89f2-5b0babbc77d2/KickoffAgileBadge.png" alt="Fundamentals of Agile Project Management" /></a></td>
-    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/6b27bb90-64cc-4f51-a659-d4932593922b"><img src="https://images.credly.com/images/a13653a5-3902-4eb9-96ca-790f6b535d4e/blob" alt="LFS148: Getting Started with OpenTelemetry" /></a></td>
   </tr>
   <tr>
+    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/64009072-fb78-403a-b0d1-937b1fc9dcc9"><img src="https://images.credly.com/images/2677386a-c65f-4d4d-89f2-5b0babbc77d2/KickoffAgileBadge.png" alt="Fundamentals of Agile Project Management" /></a></td>
+    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/66189253-ac63-461d-9f2c-61d59571f5b5"><img src="https://images.credly.com/images/c35303ff-2b71-4f77-8fb2-c985c39dbf7f/blob" alt="LFEL1014: Scaling Cloud Native Applications with KEDA" /></a></td>
+    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/6b27bb90-64cc-4f51-a659-d4932593922b"><img src="https://images.credly.com/images/a13653a5-3902-4eb9-96ca-790f6b535d4e/blob" alt="LFS148: Getting Started with OpenTelemetry" /></a></td>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/91457304-5984-4eb2-9b0e-e580f64fb365"><img src="https://images.credly.com/images/2397c05c-eb0e-4b08-be97-9e8261d43125/blob" alt="LFS162: Introduction to DevOps and Site Reliability Engineering" /></a></td>
+  </tr>
+  <tr>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/8f1abdcf-62c6-497b-9c5a-7bd3d76bbd79"><img src="https://images.credly.com/images/0f5127c3-639b-47f2-abca-01107591c639/blob" alt="LFS167: Introduction to Jenkins" /></a></td>
+    <td width="25%"></td>
     <td width="25%"></td>
     <td width="25%"></td>
   </tr>
 </table>
 <p align="center">
-  <sub>Showing 25 public badge(s) from Credly. Source: <a href="https://www.credly.com/users/duy-khiem">Credly profile</a>.</sub>
+  <sub>Showing 26 public badge(s) from Credly. Source: <a href="https://www.credly.com/users/duy-khiem">Credly profile</a>.</sub>
 </p>
 <!-- credly-badges:end -->
 
