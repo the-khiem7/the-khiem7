@@ -5,6 +5,7 @@ import {
   buildSections,
   decodeHtml,
   loadConfig,
+  renderBadgeBlock,
   renderBadgeTable,
   replaceSection,
 } from "./update-credly-badges.mjs";
@@ -54,16 +55,22 @@ test("loadConfig treats 0 and junk as defaults", () => {
   assert.equal(loadConfig(env).badgeLimit, 0);
 });
 
+const awsPartner = (name, extra = {}) =>
+  badge(name, { typeCategory: "learning", ownerSlug: "amazon-web-services", ...extra });
+
+const solace = (name) => badge(name, { provider: "Solace" });
+
 test("buildSections splits AWS, external, and other badges", () => {
   const sections = buildSections(
     {
       credlyBadges: [
         awsCert("saa", { provider: "AWS" }),
+        awsPartner("AWS Partner: x"),
         badge("zeta", { provider: "Zed" }),
         badge("alpha", { provider: "Acme" }),
         badge("nameless"),
       ],
-      externalBadges: [badge("ext-b", { provider: "Solace" }), badge("ext-a", { provider: "Solace" })],
+      externalBadges: [solace("ext-b"), solace("ext-a")],
     },
     config,
   );
@@ -72,12 +79,103 @@ test("buildSections splits AWS, external, and other badges", () => {
     sections.map((s) => [s.title, s.badges.map((b) => b.name)]),
     [
       ["AWS Certified", ["saa"]],
+      ["AWS Partner Credentials", ["AWS Partner: x"]],
       ["Solace Certified", ["ext-a", "ext-b"]],
       ["Other Credentials", ["alpha", "zeta", "nameless"]],
     ],
   );
   assert.equal(sections[0].columns, 1);
   assert.equal(sections[0].centered, true);
+});
+
+test("the AWS Partner rule needs the AWS owner and the prefix", () => {
+  const sections = buildSections(
+    {
+      credlyBadges: [
+        awsPartner("AWS Partner: a"),
+        awsPartner("AWS Partner: other-owner", { ownerSlug: "someone-else" }),
+        awsPartner("Well-Architected Proficient"),
+        awsCert("AWS Partner: cert"),
+      ],
+      externalBadges: [],
+    },
+    config,
+  );
+
+  assert.deepEqual(
+    sections.map((s) => [s.title, s.badges.map((b) => b.name)]),
+    [
+      ["AWS Certified", ["AWS Partner: cert"]],
+      ["AWS Partner Credentials", ["AWS Partner: a"]],
+      ["Other Credentials", ["AWS Partner: other-owner", "Well-Architected Proficient"]],
+    ],
+  );
+});
+
+test("AWS Partner Credentials uses the normal grid", () => {
+  const [section] = buildSections(
+    { credlyBadges: [awsPartner("AWS Partner: a"), awsPartner("AWS Partner: b")], externalBadges: [] },
+    config,
+  );
+
+  assert.equal(section.columns, config.badgesPerRow);
+  assert.equal(section.centered, undefined);
+  assert.equal(section.imageWidth, undefined);
+});
+
+test("Solace Associate and Ambassador lead as a centered row", () => {
+  const sections = buildSections(
+    {
+      credlyBadges: [],
+      externalBadges: [
+        solace("Solace Certified Developer Practitioner"),
+        solace("Solace Certified Integration Associate"),
+        solace("Solace Certified Partner Ambassador"),
+        solace("Solace Certified Solutions Consultant"),
+      ],
+    },
+    config,
+  );
+
+  assert.deepEqual(
+    sections.map((s) => [s.title, s.badges.map((b) => b.name)]),
+    [
+      [
+        "Solace Certified",
+        ["Solace Certified Integration Associate", "Solace Certified Partner Ambassador"],
+      ],
+      [
+        "Solace Certified",
+        ["Solace Certified Developer Practitioner", "Solace Certified Solutions Consultant"],
+      ],
+    ],
+  );
+  assert.equal(sections[0].columns, 2);
+  assert.equal(sections[0].centered, true);
+  assert.equal(sections[0].imageWidth, 200);
+  assert.equal(sections[1].columns, config.badgesPerRow);
+  assert.equal(sections[1].centered, undefined);
+});
+
+test("Solace without lead badges or without the rest has no empty section", () => {
+  const titles = (externalBadges) =>
+    buildSections({ credlyBadges: [], externalBadges }, config).map((s) => s.badges.length);
+
+  assert.deepEqual(titles([solace("Solace Certified Developer Practitioner")]), [1]);
+  assert.deepEqual(titles([solace("Solace Certified Partner Ambassador")]), [1]);
+});
+
+test("renderBadgeBlock prints one heading for consecutive sections with the same title", () => {
+  const sections = [
+    { title: "Solace Certified", badges: [badge("a")], columns: 1 },
+    { title: "Solace Certified", badges: [badge("b")], columns: 1 },
+    { title: "Other Credentials", badges: [badge("c")], columns: 1 },
+  ];
+  const html = renderBadgeBlock(sections, { count: 3, profileUrl: "https://x" });
+
+  assert.equal(html.match(/## Solace Certified/g).length, 1);
+  assert.equal(html.match(/## Other Credentials/g).length, 1);
+  assert.equal(html.match(/<table/g).length, 3);
 });
 
 test("buildSections applies filter and limit only to other credentials", () => {

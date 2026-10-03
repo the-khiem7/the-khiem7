@@ -50,10 +50,30 @@ const CREDENTIAL_SECTIONS = [
     imageWidth: 200,
     centered: true,
   },
+  {
+    // Credly gives these no type of their own (they are "Learning" like the other AWS training
+    // badges), so the name prefix is the only signal. AWS Certified is listed first and claims
+    // any certification before this rule runs.
+    title: "AWS Partner Credentials",
+    match: (badge) =>
+      badge.ownerSlug === "amazon-web-services" && /^AWS Partner:/i.test(badge.name),
+  },
+];
+
+// Externally uploaded badges are grouped per issuer. An issuer listed here gets its matching
+// badges as a separate leading table under the same "<Issuer> Certified" heading.
+const EXTERNAL_LEAD_ROWS = [
+  {
+    issuer: "Solace",
+    match: (badge) => /\b(associate|ambassador)\b/i.test(badge.name),
+    imageWidth: 200,
+    centered: true,
+  },
 ];
 
 const collator = new Intl.Collator("en", { sensitivity: "base" });
 const compareText = (a, b) => collator.compare(a, b);
+const compareByName = (a, b) => compareText(a.name, b.name);
 
 // ---------------------------------------------------------------- config
 
@@ -251,8 +271,9 @@ export function buildSections(
       sections.push({
         title: rule.title,
         badges: matched.sort(compareBadges),
-        // Fewer badges than a full row: shrink the table to the badge count so the cells stay centered.
-        columns: Math.min(matched.length, config.badgesPerRow),
+        // A centered section shrinks the table to the badge count so the cells stay centered;
+        // the others use the normal grid so a few badges do not stretch to the full width.
+        columns: rule.centered ? Math.min(matched.length, config.badgesPerRow) : config.badgesPerRow,
         imageWidth: rule.imageWidth,
         centered: rule.centered,
       });
@@ -267,11 +288,24 @@ export function buildSections(
   );
 
   for (const [issuer, badges] of groupByProvider(externalBadges)) {
-    sections.push({
-      title: `${issuer} Certified`,
-      badges: badges.sort((a, b) => compareText(a.name, b.name)),
-      columns: config.badgesPerRow,
-    });
+    const title = `${issuer} Certified`;
+    const lead = EXTERNAL_LEAD_ROWS.find((row) => row.issuer === issuer);
+    const leadBadges = lead ? badges.filter(lead.match) : [];
+    const restBadges = lead ? badges.filter((badge) => !lead.match(badge)) : badges;
+
+    if (leadBadges.length > 0) {
+      sections.push({
+        title,
+        badges: leadBadges.sort(compareByName),
+        columns: Math.min(leadBadges.length, config.badgesPerRow),
+        imageWidth: lead.imageWidth,
+        centered: lead.centered,
+      });
+    }
+
+    if (restBadges.length > 0) {
+      sections.push({ title, badges: restBadges.sort(compareByName), columns: config.badgesPerRow });
+    }
   }
 
   if (other.length > 0) {
@@ -309,8 +343,14 @@ function compareBadges(a, b) {
 // ---------------------------------------------------------------- render
 
 export function renderBadgeBlock(sections, metadata) {
+  // Consecutive sections with the same title (an issuer's lead table and its grid) share one heading.
   const body = sections
-    .map((section) => `## ${escapeHtml(section.title)}\n${renderBadgeTable(section.badges, section)}`)
+    .map((section, index) => {
+      const table = renderBadgeTable(section.badges, section);
+      return section.title === sections[index - 1]?.title
+        ? table
+        : `## ${escapeHtml(section.title)}\n${table}`;
+    })
     .join("\n\n");
 
   return `${START_MARKER}
