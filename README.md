@@ -158,9 +158,9 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
 ## AWS Partner Credentials
 <table width="100%">
   <tr>
+    <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/b7677eec-625f-4df7-a3e1-1bc5b5f9d941"><img src="https://images.credly.com/images/59c5bb35-8308-4b76-a05c-d9ab2ef3f7f0/blob" alt="AWS Partner: Cloud Operations Essentials" /></a></td>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/29a2039f-da12-4556-9352-bf3d6ffcf65e"><img src="https://images.credly.com/images/c5a5506c-0b33-4fcc-9d6e-c81eac6a2a6a/blob" alt="AWS Partner: DevOps Essentials" /></a></td>
     <td align="center" valign="top" width="25%"><a href="https://www.credly.com/badges/d5337f97-19af-41d0-908f-b5e8486033af"><img src="https://images.credly.com/images/8f006312-3154-45bf-a845-4a043641e83c/blob" alt="AWS Partner: Technical Accredited - Training Badge" /></a></td>
-    <td width="25%"></td>
     <td width="25%"></td>
   </tr>
 </table>
@@ -216,7 +216,7 @@ AI-powered emergency snakebite response ecosystem connecting victims, rescuers, 
   </tr>
 </table>
 <p align="center">
-  <sub>Showing 26 public badge(s) from Credly. Source: <a href="https://www.credly.com/users/duy-khiem">Credly profile</a>.</sub>
+  <sub>Showing 27 public badge(s) from Credly. Source: <a href="https://www.credly.com/users/duy-khiem">Credly profile</a>.</sub>
 </p>
 <!-- credly-badges:end -->
 
